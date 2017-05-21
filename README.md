@@ -1,4 +1,12 @@
 # iOSInterviewConcepts
+## Memory Management
+
+**What is the difference between copy and retain?**
+
+Calling retain on an object will increase its retain count by one. When the retain count of an objective reaches 0, the object will be deallocated and released from memory.
+
+When you retain an object, you share the same version with whoever passed the object to you. But when you copy an object, you do not share the same version of the object that was passed to you. Instead, a duplicate of that object is created with duplicated values.
+
 ## Thread Management
 
 **What is the difference between atomic and non-atomic synthesized properties?**
