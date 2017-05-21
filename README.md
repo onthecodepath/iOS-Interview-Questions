@@ -1,13 +1,12 @@
 # iOS-Interview-Questions
 
-A collection of iOS interview questions and answers. These concepts are important especially for beginner developer to learn and understand.
+An open-source collection of iOS interview questions and answers. These concepts are important especially for beginner developer to learn and understand.
 
 - [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
     - What is an object managed context?
 - [General/Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
-    - What is the difference between a stack vs a heap?
     - What is the difference between a class and an object?
     - What is the delegation pattern?
     - What is MVC and MVVC?
@@ -17,6 +16,7 @@ A collection of iOS interview questions and answers. These concepts are importan
     - What is the difference between copy and retain?
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
     - What is the difference between atomic and non-atomic synthesized properties?
+    - What is the difference between a stack vs a heap?
 
 
 ## Core Data
@@ -33,15 +33,14 @@ NSUserDefault is typically used to store small bits of data (settings, preferenc
 First, managed object context is an instance of NSManagedObjectContext. It is the central object in the Core Data stack. It is used to create and fetch managed objects, and to manage undo and redo operations. Although it is allowed to have multiple managed object contexts, there is typically at most one managed object to represent any given record in a persistent store.
 
 ## General / Uncategorized
-What is the difference between a stack vs a heap?
 
 **What is the difference between a class and an object?**
 
 In the simplest sense, a class is a blueprint for an object. It describes the properties and behaviors common to any particular type of object. An object, on the other hand, is an instance of a class.
 
-What is the delegation pattern?
+**What is the delegation pattern?**
 
-What is MVC and MVVC?
+**What is MVC and MVVC?**
 
 **What is JSON?**
 
@@ -51,15 +50,19 @@ You typically use either when accessing a property in Objective-C. When you use 
 
 In the case that you would write your own setter method, using _ would not call that setter method. Using self. on the property, however, would call the setter method you implemented. '
 
-## Object Oriented Programming (OOP)
-
-## Memory Management
+## Memory / Memory Management
 
 **What is the difference between *copy* and *retain*?**
 
 Calling *retain* on an object will increase its *retain* count by one. When the *retain* count of an objective reaches 0, the object will be deallocated and released from memory.
 
 When you *retain* an object, you share the same version with whoever passed the object to you. But when you *copy* an object, you do not share the same version of the object that was passed to you. Instead, a duplicate of that object is created with duplicated values.
+
+**What is the difference between a stack vs a heap?**
+
+A stack is a region of memory where data is added or removed in a last-in-first-out (LIFO) order. According to [Ates Goral](http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap), it is the memory set aside as scratch space for a thread of execution. Meanwhile the heap is memory set aside for dynamic allocation. Unlike the stack, you can allocate a block at any time and free it at anytime. 
+
+Note: In Objective-C, all objects are always allocated on the heap, or at least should be treated as if on the heap. 
 
 ## Thread Management
 
@@ -73,6 +76,6 @@ First, properties are set to *atomic* by default.
 
 ## Unit Testing
 
-What is the purpose of unit testing? What are the benefits?
+**What is the purpose of unit testing? What are the benefits?**
 
 
