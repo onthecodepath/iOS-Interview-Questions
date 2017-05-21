@@ -1,4 +1,7 @@
-# iOSInterviewConcepts
+# iOS-Interview-Questions
+
+A collection of iOS interview questions and answers in one place.
+
 ## Memory Management
 
 **What is the difference between copy and retain?**
