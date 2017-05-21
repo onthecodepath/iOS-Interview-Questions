@@ -2,22 +2,22 @@
 
 A collection of iOS interview questions and answers in one place.
 
--[Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
-    -What is Core Data?
-    -What is an object managed model?
-    -What is an object managed coordinator?
-    -What is an object managed context?
--[General/Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
-    -What is the difference between a stack vs a heap?
-    -What is the difference between a class and an object?
-    -What is the delegation pattern?
-    -What is MVC and MVVC?
-    -What is JSON?
-    -What is the difference between _name vs self.name?
--[Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory-management)
-    -What is the difference between copy and retain?
--[Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
-    -What is the difference between atomic and non-atomic synthesized properties?
+- [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
+    - What is Core Data?
+    - What is an object managed model?
+    - What is an object managed coordinator?
+    - What is an object managed context?
+- [General/Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
+    - What is the difference between a stack vs a heap?
+    - What is the difference between a class and an object?
+    - What is the delegation pattern?
+    - What is MVC and MVVC?
+    - What is JSON?
+    - What is the difference between _name vs self.name?
+- [Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory-management)
+    - What is the difference between copy and retain?
+- [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
+    - What is the difference between atomic and non-atomic synthesized properties?
 
 
 ## Core Data
