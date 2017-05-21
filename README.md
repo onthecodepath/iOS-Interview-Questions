@@ -1,37 +1,10 @@
 # iOSInterviewConcepts
-## Core Data
-What is Core Data?
+## Thread Management
 
-What is an object managed model?
+**What is the difference between atomic and non-atomic synthesized properties?**
 
-What is an object managed coordinator?
+First, properties are set to atomic by default. 
 
-What is an object managed context?
+Atomic properties are more likely to guarentee thread-safety because it will ensure that a value is fully set (by the setter method) or fully retrieved (by the getter method) when accessor methods are called simultaneously.
 
-
-## General
-What is the difference between a stack vs a heap?
-
-Why iOS over Android?
-
-Why Objective-C over Swift?
-
-What is the difference between a class and an object?
-
-What is the delegation pattern?
-
-What is MVC and MVVC?
-
-What is JSON?
-
-What is the difference between atomic vs nonatomic?
-
-What is the difference between _name vs self.name?
-
-
-Memory Management
-
-Multiple Threading
-
-## Unit Testing
-What is the purpose of unit testing? What are the benefits?
+Non-atomic properties, howeer are not thread-safe. While they run faster, they may cause race conditions. In the event that accessor methods are called simultaneously and a race condition occurs, a setter value would first release the old value and a getter method would retrieve nil since no value has not been set yet.
