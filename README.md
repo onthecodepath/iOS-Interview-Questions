@@ -11,7 +11,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 ## Table of Contents
 
 - [Architecture / Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#architecture--xdesign-pattern)
-    - [What is Singleton Pattern?](https://github.com/onthecodepath/iOS-Interview-Questions#what-is-singleton-pattern)
+    - What is Singleton Pattern?
     - What is the delegation pattern?
     - What is MVC?
     - What is MVVM?
