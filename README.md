@@ -12,6 +12,8 @@ An open-source collection of iOS interview questions and answers. These concepts
     - What is MVC?
     - What is JSON?
     - What is the difference between _name vs self.name?
+    - What is a category and when is it used?
+    - What is the difference between not-running, inactive, active, background and suspended execution states?
 - [Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory-management)
     - What is the difference between copy and retain?
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
@@ -62,6 +64,18 @@ JSON stands for JavaScript Object Notation. According to [wiki](https://en.wikip
 You typically use either when accessing a property in Objective-C. When you use _, you're referencing the actual instance variable directly. You should avoid this. Instead, you should use self. to ensure that any getter/setter actions are honored. 
 
 In the case that you would write your own setter method, using _ would not call that setter method. Using self. on the property, however, would call the setter method you implemented. '
+
+**What is a category and where is it used?**
+
+Categories define methods of an existing class and are typically used to add them to an existing class. That class would then have access to the same methods without having access to the source code and thus, would be unable to make changes to the methods. In Objective-C, this is typically performed in the header file.
+
+**What is the difference between not-running, inactive, active, background and suspended execution states?**
+
+- Not-running occurs when the app either has not be launched or was running but was terminated by the system.
+- Inactive occurs where the app runs in the foreground but is currently not receiving events. (It can possibly be executing other code though). This state is typically brief as apps transitions to other states.
+- Active state is where the app is running in the foreground and receiving events. This is the normal mode for foreground apps.
+- Background state is where the app is in the background and executing code. Apps typically enter this state on their way to being suspended. Apps that require extra execution time may remain in this screen longer. Apps being launched directly into the background enters this state instead of inactive state.
+- Suspended state is where the app is in the background but it is not executing code. Apps will remain in memory, but are removed by the system if low-memory condition occurs in order to make more space for foreground apps.
 
 ## Memory / Memory Management
 
