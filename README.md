@@ -41,6 +41,8 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
     - What is the difference between atomic and non-atomic synthesized properties?
     - What is the difference between a stack vs a heap?
+    - What is GCD?
+    - Explain the difference between Serial vs Concurrent.
 - [Unit Testing](https://github.com/onthecodepath/iOS-Interview-Questions#unit-testing)
     - What is the purpose of unit testing? What are the benefits?
 - [View / Storyboard](https://github.com/onthecodepath/iOS-Interview-Questions#view--storyboard)
@@ -182,6 +184,15 @@ First, properties are set to *atomic* by default.
 *Non-atomic* properties, howeer are not thread-safe. While they run faster, they may cause race conditions. In the event that accessor methods are called simultaneously and a race condition occurs, a setter value would first release the old value and a getter method would retrieve nil since no value has not been set yet.
 
 **What is GCD?**
+
+GCD stands for Grand Central Dispatch. According to [Ray Wenderlich](https://www.raywenderlich.com/60749/grand-central-dispatch-in-depth-part-1), it offers the following benefits
+- Improving your app's responsiveness by helping to defer computationally expensive tasks and run them in the background.
+- Providing an easier concurrency model than locks and threads and helps to avoid concurrency bugs.
+- Potentially optimize your code with higher performance primitives for common patterns such as singletons.
+
+**Explain the difference between Serial vs Concurrent**
+
+Tasks executed *serially* are executed one at a time while tasks that are executed *concurrently* may be executed at the same time.
 
 ## Unit Testing
 
