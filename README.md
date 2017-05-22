@@ -2,7 +2,7 @@
 
 ## What is this for?
 
-Time is important when you're job-hunting. It's frustrating and time-consuming to have to search endlessly in order to practice iOS interview questions. The goal of this open-source project is to collect as many iOS interview questions together along with answers in order to save you time.
+Time is important. It's frustrating and time-consuming to have to search endlessly in order to practice iOS interview questions. The goal of this open-source project is to collect as many iOS interview questions together along with answers in order to save you time.
 
 ## Practice
 
@@ -10,6 +10,14 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 ## Table of Contents
 
+- [Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#design-pattern)
+    - Why is design pattern very important?
+    - What is Singleton Pattern?
+    - What is Facade Design Pattern?
+    - What is Decorator Design Pattern?
+    - What is Adapter Pattern?
+    - What is Observer Pattern?
+    - What is Memento Pattern?
 - [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
@@ -28,6 +36,9 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is a memory leak?
     - What is the difference between *weak* and *strong*?
     - What is a memory leak?
+- [Objective-C](https://github.com/onthecodepath/iOS-Interview-Questions#objective-c)
+    - What is synthesize in Objective-C?
+    - What is dynamic in Objective-C?
 - [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#Swift)
     - What is the difference between var and let?
     - What is the difference between a struct and a class?
@@ -42,7 +53,42 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 # Interview Questions
 
+## Design Pattern
+
+**Why is design patern very important?**
+
+Design patterns are reusable solutions to common problems in software design. They’re templates designed to help you write code that’s easy to understand and reuse. Most common Cocoa design patterns:
+- Creational: Singleton.
+- Structural: MVC, Decorator, Adapter, Facade.
+- Behavioral: Observer, and, Memento
+
+([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+
+**What is Singleton Pattern?**
+
+The Singleton design pattern ensures that only one instance exists for a given class and that there’s a global access point to that instance. It usually uses lazy loading to create the single instance when it’s needed the first time. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+
+**What is Facade Design Pattern?**
+
+The Facade design pattern provides a single interface to a complex subsystem. Instead of exposing the user to a set of classes and their APIs, you only expose one simple unified API. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+
+**What is Decorator Design Pattern?**
+
+The Decorator pattern dynamically adds behaviors and responsibilities to an object without modifying its code. It’s an alternative to subclassing where you modify a class’s behavior by wrapping it with another object. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+
+**What is Adapter Pattern?** 
+An Adapter allows classes with incompatible interfaces to work together. It wraps itself around an object and exposes a standard interface to interact with that object. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+
+**What is Observer Pattern?**
+
+In the Observer pattern, one object notifies other objects of any state changes. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+
+**What is Memento Pattern?**
+
+In Memento Pattern saves your stuff somewhere. Later on, this externalized state can be restored without violating encapsulation; that is, private data remains private. One of Apple’s specialized implementations of the Memento pattern is Archiving. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+
 ## Core Data
+
 **What is Core Data?**
 
 In Apple's [words](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreData/index.html?utm_source=iosstash.io), "Core Data is a framework that you use to manage the model layer objects in your application. It provides generalized and automated solutions to common tasks associated with object life cycle and object graph management, including persistence."
@@ -116,13 +162,24 @@ Note: In Objective-C, all objects are always allocated on the heap, or at least 
 
 **What is the difference between *weak* and *strong*?**
 
-The terms *weak* and *strong* are related to reference counting and refer to 'ownership'. Objects are typically *strong* by default. This means that you want to "own" the object you are referencing with this property/variable. In contrast, *weak* referenced objects mean that the object will live in memory as long as another object holds a *strong* reference to it*. If no other object holds a *strong* reference to it, it will be deallocated. 
+- Strong means that the reference count will be increased and the reference to it will be maintained through the life of the object.
+- Weak, means that we are pointing to an object but not increasing its reference count. It’s often used when creating a parent child relationship. The parent has a strong reference to the child but the child only has a weak reference to the parent. ([Source])(https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a)
 
 Common instances of *weak* references are delegate properties and subview/controls of a view controller's main view since those views are already strongly held by the main view. [source](http://stackoverflow.com/questions/11013587/differences-between-strong-and-weak-in-objective-c)
 
 **What is a memory leak?**
 
 A memory leak commonly occurs when an object is allocated in such a way that when it is no longer in use or needed, it is not released. In iOS programming, you create certain objects with weak references in order to avoid a strong to strong relationship that creates a retain cycle and a memory leak.
+
+## Objective-C
+
+**What is synthesize in Objective-C?**
+
+The method synthesize generates getter and setter methods for your property.
+
+**What is dynamic in Objective-C?**
+
+Dynamic is used subclasses of NSManagedObject. @dynamic can also be used to delegate the responsibility of implementing the accessors. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
 
 ## Swift
 
