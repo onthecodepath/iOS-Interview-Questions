@@ -11,16 +11,15 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 ## Table of Contents
 
 - [Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#design-pattern)
-    - Why is design pattern very important?
     - What is Singleton Pattern?
+    - What is the delegation pattern?
+    - What is MVC?
 - [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
     - What is an object managed context?
 - [General/Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
     - What is the difference between a class and an object?
-    - What is the delegation pattern?
-    - What is MVC?
     - What is JSON?
     - What is the difference between _name vs self.name?
     - What is a category and when is it used?
@@ -52,18 +51,22 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 ## Design Pattern
 
-**Why is design patern very important?**
-
-Design patterns are reusable solutions to common problems in software design. They’re templates designed to help you write code that’s easy to understand and reuse. Most common Cocoa design patterns:
-- Creational: Singleton.
-- Structural: MVC, Decorator, Adapter, Facade.
-- Behavioral: Observer, and, Memento
-
-([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
-
 **What is Singleton Pattern?**
 
 The Singleton design pattern ensures that only one instance exists for a given class and that there’s a global access point to that instance. It usually uses lazy loading to create the single instance when it’s needed the first time. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+
+**What is the delegation pattern?**
+
+The delegation pattern is a powerful pattern used in building iOS applications. The basic idea is that one object will act on another object's behalf or in coordination with another object. The delegating object typically keeps a reference to the other object (delegate) and sends a message to it at the appropriate time. It is important to note that they have a one to one relationship.
+
+**What is MVC?**
+
+MVC stands for **Model-View-Controller**. It is a software architecture pattern for implementing user interfaces. 
+
+MVC consists of three layers: the model, the view, and the controller.
+- The model layer is typically where the data resides (persistence, model objects, etc)
+- The view layer is typically where all the UI interface lies. Things like displaying buttons and numbers belong in the view layer. The view layer does not know anything about the model layer and vice versa.
+- The controller (view controller) is the layer that integrates the view layer and the model layer together. 
 
 ## Core Data
 
@@ -84,19 +87,6 @@ First, managed object context is an instance of NSManagedObjectContext. It is th
 **What is the difference between a class and an object?**
 
 In the simplest sense, a class is a blueprint for an object. It describes the properties and behaviors common to any particular type of object. An object, on the other hand, is an instance of a class.
-
-**What is the delegation pattern?**
-
-The delegation pattern is a powerful pattern used in building iOS applications. The basic idea is that one object will act on another object's behalf or in coordination with another object. The delegating object typically keeps a reference to the other object (delegate) and sends a message to it at the appropriate time. It is important to note that they have a one to one relationship.'
-
-**What is MVC?**
-
-MVC stands for **Model-View-Controller**. It is a software architecture pattern for implementing user interfaces. 
-
-MVC consists of three layers: the model, the view, and the controller.
-- The model layer is typically where the data resides (persistence, model objects, etc)
-- The view layer is typically where all the UI interface lies. Things like displaying buttons and numbers belong in the view layer. The view layer does not know anything about the model layer and vice versa.
-- The controller (view controller) is the layer that integrates the view layer and the model layer together. 
 
 **What is JSON?**
 
