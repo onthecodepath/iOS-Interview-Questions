@@ -14,7 +14,7 @@ An open-source collection of iOS interview questions and answers. These concepts
     - What is the difference between _name vs self.name?
     - What is a category and when is it used?
     - What is the difference between not-running, inactive, active, background and suspended execution states?
-- [Memory / Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory-management)
+- [Memory / Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory--memory-management)
     - What is the difference between copy and retain?
     - What is a memory leak?
     - What is the difference between *weak* and *strong*?
@@ -24,7 +24,7 @@ An open-source collection of iOS interview questions and answers. These concepts
     - What is the difference between a stack vs a heap?
 - [Unit Testing](https://github.com/onthecodepath/iOS-Interview-Questions#unit-testing)
     - What is the purpose of unit testing? What are the benefits?
-- [View / Storyboard]()
+- [View / Storyboard](https://github.com/onthecodepath/iOS-Interview-Questions#view--storyboard)
     - What is the difference between frame and bound of a UIView?
 
 ## Core Data
