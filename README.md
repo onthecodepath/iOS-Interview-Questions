@@ -30,6 +30,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is a memory leak?
 - [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#Swift)
     - What is the difference between var and let?
+    - What is the difference between a struct and a class?
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
     - What is the difference between atomic and non-atomic synthesized properties?
     - What is the difference between a stack vs a heap?
@@ -128,6 +129,14 @@ A memory leak commonly occurs when an object is allocated in such a way that whe
 **What is the difference between *var* and *let*?**
 
 *var* is a variable that can be changed while *let* denotes a constant that cannot be changed once set.
+
+**What is the difference between a struct and a class?**
+
+Structs are value types while classes are reference types. Classes have capabilities that structs do not:
+- Inheritance enables one class to inherit the characteristics of another. ([Source](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html))
+- Type casting enables you to check and interpret the type of a class instance at runtime.
+- Deinitializers enable an instance of a class to free up any resources it has assigned.
+- Reference counting allows more than one reference to a class instance.
 
 ## Thread Management
 
