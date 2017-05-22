@@ -57,7 +57,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 # Interview Questions
 
-## Architecture / xDesign Pattern
+## Architecture / Design Pattern
 
 **What is Singleton Pattern?**
 
