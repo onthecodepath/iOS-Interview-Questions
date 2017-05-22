@@ -77,6 +77,7 @@ The Facade design pattern provides a single interface to a complex subsystem. In
 The Decorator pattern dynamically adds behaviors and responsibilities to an object without modifying its code. It’s an alternative to subclassing where you modify a class’s behavior by wrapping it with another object. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
 
 **What is Adapter Pattern?** 
+
 An Adapter allows classes with incompatible interfaces to work together. It wraps itself around an object and exposes a standard interface to interact with that object. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
 
 **What is Observer Pattern?**
