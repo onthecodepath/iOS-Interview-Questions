@@ -14,14 +14,18 @@ An open-source collection of iOS interview questions and answers. These concepts
     - What is the difference between _name vs self.name?
     - What is a category and when is it used?
     - What is the difference between not-running, inactive, active, background and suspended execution states?
-- [Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory-management)
+- [Memory / Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory-management)
     - What is the difference between copy and retain?
+    - What is a memory leak?
+    - What is the difference between *weak* and *strong*?
+    - What is a memory leak?
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
     - What is the difference between atomic and non-atomic synthesized properties?
     - What is the difference between a stack vs a heap?
 - [Unit Testing](https://github.com/onthecodepath/iOS-Interview-Questions#unit-testing)
-    -What is the purpose of unit testing? What are the benefits?
-
+    - What is the purpose of unit testing? What are the benefits?
+- [View / Storyboard]()
+    - What is the difference between frame and bound of a UIView?
 
 ## Core Data
 **What is Core Data?**
@@ -44,7 +48,7 @@ In the simplest sense, a class is a blueprint for an object. It describes the pr
 
 **What is the delegation pattern?**
 
-The delegation pattern is a powerful pattern used in building iOS applications. The basic idea is that one object will act on another object's behalf or in coordination with another object. The delegating object typically keeps a reference to the other object (delegate) and sends a message to it at the appropriate time.'
+The delegation pattern is a powerful pattern used in building iOS applications. The basic idea is that one object will act on another object's behalf or in coordination with another object. The delegating object typically keeps a reference to the other object (delegate) and sends a message to it at the appropriate time. It is important to note that they have a one to one relationship.'
 
 **What is MVC?**
 
@@ -91,6 +95,18 @@ A stack is a region of memory where data is added or removed in a last-in-first-
 
 Note: In Objective-C, all objects are always allocated on the heap, or at least should be treated as if on the heap. 
 
+**What is the difference between *weak* and *strong*?**
+
+The terms *weak* and *strong* are related to reference counting and refer to 'ownership'. Objects are typically *strong* by default. This means that you want to "own" the object you are referencing with this property/variable. In contrast, *weak* referenced objects mean that the object will live in memory as long as another object holds a *strong* reference to it*. If no other object holds a *strong* reference to it, it will be deallocated. 
+
+Common instances of *weak* references are delegate properties and subview/controls of a view controller's main view since those views are already strongly held by the main view. [source](http://stackoverflow.com/questions/11013587/differences-between-strong-and-weak-in-objective-c)
+
+**What is a memory leak?**
+
+A memory leak commonly occurs when an object is allocated in such a way that when it is no longer in use or needed, it is not released. In iOS programming, you create certain objects with weak references in order to avoid a strong to strong relationship that creates a retain cycle and a memory leak.
+
+
+
 ## Thread Management
 
 **What is the difference between *atomic* and *non-atomic* synthesized properties?**
@@ -106,5 +122,19 @@ First, properties are set to *atomic* by default.
 **What is the purpose of unit/UI testing? What are the benefits?**
 
 Unit/UI testing are the basic of test-driven development. This development approach allows you to codify requirements for your code before you implement it. Unit tests are important to make sure that code meets its design and requirements and behaves as expected. Parts of the program are segregated and tested to ensure that individual parts are working correctly. 
+
+## View / Storyboard
+
+**What is the difference between frame and bound of a UIView?**
+
+The *frame* of a UIView is the region relative to the superview it is contained within while the *bounds* of a UIView is the region relative to its own coordinate system.
+
+
+
+
+
+
+
+
 
 
