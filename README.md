@@ -38,6 +38,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#Swift)
     - What is the difference between var and let?
     - What is the difference between a struct and a class?
+    - What is the difference between implicit and explicit?
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
     - What is the difference between atomic and non-atomic synthesized properties?
     - What is the difference between a stack vs a heap?
@@ -59,7 +60,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 **What is Singleton Pattern?**
 
-The Singleton design pattern ensures that only one instance exists for a given class and that there’s a global access point to that instance. It usually uses lazy loading to create the single instance when it’s needed the first time. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+The Singleton design pattern ensures that only one instance exists for a given class and that there’s a global access point to that instance. It usually uses lazy loading to create the single instance when it’s needed the first time. ([source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
 
 **What is the delegation pattern?**
 
@@ -118,7 +119,7 @@ Categories define methods of an existing class and are typically used to add the
 
 **Is it faster to iterate through an NSArray or an NSSet?**
 
-It depends. NSSet is faster to iterate through if the order of the items in the collection is not important. The reason is because NSSet uses hash values in order to find items while NSArray has to iterate through its entire contents to find a particular object. ([Source - #25](https://medium.com/cocoaacademymag/25-ios-interview-questions-and-answers-for-junior-developers-19bfe6e99b0))
+It depends. NSSet is faster to iterate through if the order of the items in the collection is not important. The reason is because NSSet uses hash values in order to find items while NSArray has to iterate through its entire contents to find a particular object. ([source - #25](https://medium.com/cocoaacademymag/25-ios-interview-questions-and-answers-for-junior-developers-19bfe6e99b0))
 
 ## Memory / Memory Management
 
@@ -131,7 +132,7 @@ ARC stands for Automatic Reference Counting. Unlike many other programming langa
 First, objects are *strong* by default.
 
 - *Strong* means that the reference count will be increased and the reference to it will be maintained through the life of the object. 
-- *Weak*, means that we are pointing to an object but not increasing its reference count. It’s often used when creating a parent child relationship. The parent has a strong reference to the child but the child only has a weak reference to the parent. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+- *Weak*, means that we are pointing to an object but not increasing its reference count. It’s often used when creating a parent child relationship. The parent has a strong reference to the child but the child only has a weak reference to the parent. ([source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
 
 Common instances of *weak* references are delegate properties and subview/controls of a view controller's main view since those views are already strongly held by the main view. ([source](http://stackoverflow.com/questions/11013587/differences-between-strong-and-weak-in-objective-c))
 
@@ -163,7 +164,7 @@ The method synthesize generates getter and setter methods for your property.
 
 **What is dynamic in Objective-C?**
 
-Dynamic is used for subclasses of NSManagedObject. @dynamic can also be used to delegate the responsibility of implementing the accessors. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+Dynamic is used for subclasses of NSManagedObject. @dynamic can also be used to delegate the responsibility of implementing the accessors. ([source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
 
 ## Swift
 
@@ -174,10 +175,21 @@ Dynamic is used for subclasses of NSManagedObject. @dynamic can also be used to 
 **What is the difference between a struct and a class?**
 
 Structs are value types while classes are reference types. Classes have capabilities that structs do not:
-- Inheritance enables one class to inherit the characteristics of another. ([Source](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html))
+- Inheritance enables one class to inherit the characteristics of another. ([source](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html))
 - Type casting enables you to check and interpret the type of a class instance at runtime.
 - Deinitializers enable an instance of a class to free up any resources it has assigned.
 - Reference counting allows more than one reference to a class instance.
+
+**What is the difference between implicit and explicit?**
+
+When referring to something as implicit or explicit, it is often referring to how an object is declared. In the two examples below:
+
+```
+var name: String = "onthecodepath" // explicit
+var name = "onthecodepath" // implicit
+``
+
+In the first line above, the name variable is *explicitly* declared since the type of the variable follows the name of the variable. In the second line, the String type is not explicitly declared. However, Swift is able to infer that name is of a String type since the value that it is being set as is of a String type.
 
 ## Thread Management
 
