@@ -48,10 +48,10 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [View / Storyboard](https://github.com/onthecodepath/iOS-Interview-Questions#view--storyboard)
     - What is the difference between frame and bound of a UIView?
     - What is the reuseIdentifier for?
-- Algorithm Resources
+- [Algorithm Resources](https://github.com/onthecodepath/iOS-Interview-Questions#algorithm-resources)
     - EKAlgorithm
     - swift-algorithm-club
-- Contributing
+- [Contributing](https://github.com/onthecodepath/iOS-Interview-Questions#contributing)
 
 # Interview Questions
 
