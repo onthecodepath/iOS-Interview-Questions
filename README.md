@@ -13,11 +13,6 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#design-pattern)
     - Why is design pattern very important?
     - What is Singleton Pattern?
-    - What is Facade Design Pattern?
-    - What is Decorator Design Pattern?
-    - What is Adapter Pattern?
-    - What is Observer Pattern?
-    - What is Memento Pattern?
 - [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
@@ -32,10 +27,12 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is the difference between not-running, inactive, active, background and suspended execution states?
     - Is it faster to iterate through an NSArray or an NSSet?
 - [Memory / Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory--memory-management)
-    - What is the difference between copy and retain?
-    - What is the difference between a stack vs a heap?
+    - What is ARC?
     - What is the difference between *weak* and *strong*?
     - What is a memory leak?
+    - What is a retain cycle?
+    - What is the difference between copy and retain?
+    - What is the difference between a stack vs a heap?
 - [Objective-C](https://github.com/onthecodepath/iOS-Interview-Questions#objective-c)
     - What is synthesize in Objective-C?
     - What is dynamic in Objective-C?
@@ -67,26 +64,6 @@ Design patterns are reusable solutions to common problems in software design. Th
 **What is Singleton Pattern?**
 
 The Singleton design pattern ensures that only one instance exists for a given class and that there’s a global access point to that instance. It usually uses lazy loading to create the single instance when it’s needed the first time. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
-
-**What is Facade Design Pattern?**
-
-The Facade design pattern provides a single interface to a complex subsystem. Instead of exposing the user to a set of classes and their APIs, you only expose one simple unified API. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
-
-**What is Decorator Design Pattern?**
-
-The Decorator pattern dynamically adds behaviors and responsibilities to an object without modifying its code. It’s an alternative to subclassing where you modify a class’s behavior by wrapping it with another object. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
-
-**What is Adapter Pattern?** 
-
-An Adapter allows classes with incompatible interfaces to work together. It wraps itself around an object and exposes a standard interface to interact with that object. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
-
-**What is Observer Pattern?**
-
-In the Observer pattern, one object notifies other objects of any state changes. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
-
-**What is Memento Pattern?**
-
-In Memento Pattern saves your stuff somewhere. Later on, this externalized state can be restored without violating encapsulation; that is, private data remains private. One of Apple’s specialized implementations of the Memento pattern is Archiving. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
 
 ## Core Data
 
@@ -149,17 +126,9 @@ It depends. NSSet is faster to iterate through if the order of the items in the 
 
 ## Memory / Memory Management
 
-**What is the difference between *copy* and *retain*?**
+**What is ARC?**
 
-Calling *retain* on an object will increase its *retain* count by one. When the *retain* count of an objective reaches 0, the object will be deallocated and released from memory.
-
-When you *retain* an object, you share the same version with whoever passed the object to you. But when you *copy* an object, you do not share the same version of the object that was passed to you. Instead, a duplicate of that object is created with duplicated values.
-
-**What is the difference between a stack vs a heap?**
-
-A stack is a region of memory where data is added or removed in a last-in-first-out (LIFO) order. According to [Ates Goral](http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap), it is the memory set aside as scratch space for a thread of execution. Meanwhile the heap is memory set aside for dynamic allocation. Unlike the stack, you can allocate a block at any time and free it at anytime. 
-
-Note: In Objective-C, all objects are always allocated on the heap, or at least should be treated as if on the heap. 
+ARC stands for Automatic Reference Counting. Unlike many other programming langauges that have a garbage collector, Objective-C and Swift use a memory-management that tracks and manages your app's memory usage. Unlike garbage collection, ARC does not handle reference cycles automatically. As long as an object has *strong* references to it, it will not be deallocated. 
 
 **What is the difference between *weak* and *strong*?**
 
@@ -171,6 +140,22 @@ Common instances of *weak* references are delegate properties and subview/contro
 **What is a memory leak?**
 
 A memory leak commonly occurs when an object is allocated in such a way that when it is no longer in use or needed, it is not released. In iOS programming, you create certain objects with weak references in order to avoid a strong to strong relationship that creates a retain cycle and a memory leak.
+
+**What is a retain cycle?**
+
+Retain cycles can occur when memory management is based on retain count. This typically occurs when two objects strongly reference each other. As a result, the retain count of either object will never reach zero and deallocated from memory (hence retaining each other). 
+
+**What is the difference between *copy* and *retain*?**
+
+Calling *retain* on an object will increase its *retain* count by one. When the *retain* count of an objective reaches 0, the object will be deallocated and released from memory.
+
+When you *retain* an object, you share the same version with whoever passed the object to you. But when you *copy* an object, you do not share the same version of the object that was passed to you. Instead, a duplicate of that object is created with duplicated values.
+
+**What is the difference between a stack vs a heap?**
+
+A stack is a region of memory where data is added or removed in a last-in-first-out (LIFO) order. According to [Ates Goral](http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap), it is the memory set aside as scratch space for a thread of execution. Meanwhile the heap is memory set aside for dynamic allocation. Unlike the stack, you can allocate a block at any time and free it at anytime. 
+
+Note: In Objective-C, all objects are always allocated on the heap, or at least should be treated as if on the heap. 
 
 ## Objective-C
 
@@ -205,6 +190,8 @@ First, properties are set to *atomic* by default.
 *Atomic* properties are more likely to guarentee thread-safety because it will ensure that a value is fully set (by the setter method) or fully retrieved (by the getter method) when accessor methods are called simultaneously.
 
 *Non-atomic* properties, howeer are not thread-safe. While they run faster, they may cause race conditions. In the event that accessor methods are called simultaneously and a race condition occurs, a setter value would first release the old value and a getter method would retrieve nil since no value has not been set yet.
+
+**What is GCD?**
 
 ## Unit Testing
 
