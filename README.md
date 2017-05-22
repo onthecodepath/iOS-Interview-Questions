@@ -4,6 +4,8 @@
 
 It's as straight-forward as the repository name is. This is intended to be an open-source collection of iOS interview questions accompanied with answers for your convenience. 
 
+## Table of Contents
+
 - [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
@@ -21,6 +23,7 @@ It's as straight-forward as the repository name is. This is intended to be an op
     - What is a memory leak?
     - What is the difference between *weak* and *strong*?
     - What is a memory leak?
+- [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#Swift)
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
     - What is the difference between atomic and non-atomic synthesized properties?
     - What is the difference between a stack vs a heap?
@@ -109,7 +112,11 @@ Common instances of *weak* references are delegate properties and subview/contro
 
 A memory leak commonly occurs when an object is allocated in such a way that when it is no longer in use or needed, it is not released. In iOS programming, you create certain objects with weak references in order to avoid a strong to strong relationship that creates a retain cycle and a memory leak.
 
+## Swift
 
+**What is the difference between *var* and *let*?**
+
+*var* is a variable that can be changed while *let* denotes a constant that cannot be changed once set.
 
 ## Thread Management
 
@@ -135,9 +142,13 @@ The *frame* of a UIView is the region relative to the superview it is contained 
 
 # Contributing
 
-## Hey! I detected a typo or an incorrect answer to one of your questions
+**I detected a typo or an incorrect answer to one of your questions**
 
 Great! Opening an issue or even making the changes yourself and making a pull request would be greatly appreciated! 
+
+**Requesting questions to be answered and topics**
+
+If you open an issue, I would be happy to go ahead and add the question with the appropriate answer when I get to it!
 
 
 
