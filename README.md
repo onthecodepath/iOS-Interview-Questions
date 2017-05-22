@@ -59,11 +59,11 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 ## Architecture / Design Pattern
 
-**What is Singleton Pattern?**
+### What is Singleton Pattern?
 
 The Singleton design pattern ensures that only one instance exists for a given class and that there’s a global access point to that instance. It usually uses lazy loading to create the single instance when it’s needed the first time. ([source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
 
-**What is the delegation pattern?**
+### What is the delegation pattern? 
 
 The delegation pattern is a powerful pattern used in building iOS applications. The basic idea is that one object will act on another object's behalf or in coordination with another object. The delegating object typically keeps a reference to the other object (delegate) and sends a message to it at the appropriate time. It is important to note that they have a one to one relationship.
 
