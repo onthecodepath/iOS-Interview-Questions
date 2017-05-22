@@ -33,7 +33,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - Is it faster to iterate through an NSArray or an NSSet?
 - [Memory / Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory--memory-management)
     - What is the difference between copy and retain?
-    - What is a memory leak?
+    - What is the difference between a stack vs a heap?
     - What is the difference between *weak* and *strong*?
     - What is a memory leak?
 - [Objective-C](https://github.com/onthecodepath/iOS-Interview-Questions#objective-c)
