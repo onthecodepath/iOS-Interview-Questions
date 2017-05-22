@@ -70,9 +70,9 @@ The delegation pattern is a powerful pattern used in building iOS applications. 
 MVC stands for **Model-View-Controller**. It is a software architecture pattern for implementing user interfaces. 
 
 MVC consists of three layers: the model, the view, and the controller.
-- The *model layer* is typically where the data resides (persistence, model objects, etc)
-- The *view layer* is typically where all the UI interface lies. Things like displaying buttons and numbers belong in the view layer. The view layer does not know anything about the model layer and vice versa.
-- The *controller (view controller)* is the layer that integrates the view layer and the model layer together. 
+- The **model layer** is typically where the data resides (persistence, model objects, etc)
+- The **view layer** is typically where all the UI interface lies. Things like displaying buttons and numbers belong in the view layer. The view layer does not know anything about the model layer and vice versa.
+- The **controller (view controller)** is the layer that integrates the view layer and the model layer together. 
 
 ## Core Data
 
@@ -163,7 +163,7 @@ The method synthesize generates getter and setter methods for your property.
 
 **What is dynamic in Objective-C?**
 
-Dynamic is used subclasses of NSManagedObject. @dynamic can also be used to delegate the responsibility of implementing the accessors. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+Dynamic is used for subclasses of NSManagedObject. @dynamic can also be used to delegate the responsibility of implementing the accessors. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
 
 ## Swift
 
