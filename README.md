@@ -9,7 +9,7 @@ An open-source collection of iOS interview questions and answers. These concepts
 - [General/Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
     - What is the difference between a class and an object?
     - What is the delegation pattern?
-    - What is MVC and MVVC?
+    - What is MVC?
     - What is JSON?
     - What is the difference between _name vs self.name?
 - [Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory-management)
@@ -17,6 +17,8 @@ An open-source collection of iOS interview questions and answers. These concepts
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
     - What is the difference between atomic and non-atomic synthesized properties?
     - What is the difference between a stack vs a heap?
+- [Unit Testing](https://github.com/onthecodepath/iOS-Interview-Questions#unit-testing)
+    -What is the purpose of unit testing? What are the benefits?
 
 
 ## Core Data
@@ -40,9 +42,20 @@ In the simplest sense, a class is a blueprint for an object. It describes the pr
 
 **What is the delegation pattern?**
 
-**What is MVC and MVVC?**
+The delegation pattern is a powerful pattern used in building iOS applications. The basic idea is that one object will act on another object's behalf or in coordination with another object. The delegating object typically keeps a reference to the other object (delegate) and sends a message to it at the appropriate time.'
+
+**What is MVC?**
+
+MVC stands for **Model-View-Controller**. It is a software architecture pattern for implementing user interfaces. 
+
+MVC consists of three layers: the model, the view, and the controller.
+- The model layer is typically where the data resides (persistence, model objects, etc)
+- The view layer is typically where all the UI interface lies. Things like displaying buttons and numbers belong in the view layer. The view layer does not know anything about the model layer and vice versa.
+- The controller (view controller) is the layer that integrates the view layer and the model layer together. 
 
 **What is JSON?**
+
+JSON stands for JavaScript Object Notation. According to [wiki](https://en.wikipedia.org/wiki/JSON), it is a file format that uses human-readable text to transmite data objects consisting of attribute-value pairs and array data types. 
 
 **What is the difference between _ vs self. in Objective-C?**
 
@@ -76,6 +89,8 @@ First, properties are set to *atomic* by default.
 
 ## Unit Testing
 
-**What is the purpose of unit testing? What are the benefits?**
+**What is the purpose of unit/UI testing? What are the benefits?**
+
+Unit/UI testing are the basic of test-driven development. This development approach allows you to codify requirements for your code before you implement it. Unit tests are important to make sure that code meets its design and requirements and behaves as expected. Parts of the program are segregated and tested to ensure that individual parts are working correctly. 
 
 
