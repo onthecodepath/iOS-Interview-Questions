@@ -10,10 +10,11 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 ## Table of Contents
 
-- [Architecture / Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#design-pattern)
+- [Architecture / Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#architecture--xdesign-pattern)
     - What is Singleton Pattern?
     - What is the delegation pattern?
     - What is MVC?
+    - What is MVVM?
 - [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
@@ -74,6 +75,14 @@ MVC consists of three layers: the model, the view, and the controller.
 - The **model layer** is typically where the data resides (persistence, model objects, etc)
 - The **view layer** is typically where all the UI interface lies. Things like displaying buttons and numbers belong in the view layer. The view layer does not know anything about the model layer and vice versa.
 - The **controller (view controller)** is the layer that integrates the view layer and the model layer together. 
+
+**What is MVVM?**
+
+MVVM stands for **Model-View-ViewModel**. It is a software architecture pattern for implementing user interfaces.
+
+MVVM is an augmented version of MVC where the presentation logic is moved out of the controller and into the view model. The view model is responsible for handling most, if not all, of the view's display logic. 
+
+A common occurence in MVC is where you have a massive-view-controller (some joke this is what MVC stands for). In order to shrink the size of your view controller and make the logic and readibility of your code easier to follow along, the MVVM will be used. 
 
 ## Core Data
 
