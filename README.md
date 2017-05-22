@@ -2,7 +2,11 @@
 
 ## What is this for?
 
-It's as straight-forward as the repository name is. This is intended to be an open-source collection of iOS interview questions accompanied with answers for your convenience. 
+Time is important when you're job-hunting. It's frustrating and time-consuming to have to search endlessly in order to practice iOS interview questions. The goal of this open-source project is to collect as many iOS interview questions together along with answers in order to save you time.
+
+## Practice
+
+Use the Table of Contents to practice and test your knowledge. It doesn't show the answer so you'll be able to go over the questions without relying on the answer for help.
 
 ## Table of Contents
 
@@ -18,12 +22,14 @@ It's as straight-forward as the repository name is. This is intended to be an op
     - What is the difference between _name vs self.name?
     - What is a category and when is it used?
     - What is the difference between not-running, inactive, active, background and suspended execution states?
+    - Is it faster to iterate through an NSArray or an NSSet?
 - [Memory / Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory--memory-management)
     - What is the difference between copy and retain?
     - What is a memory leak?
     - What is the difference between *weak* and *strong*?
     - What is a memory leak?
 - [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#Swift)
+    - What is the difference between var and let?
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
     - What is the difference between atomic and non-atomic synthesized properties?
     - What is the difference between a stack vs a heap?
@@ -89,6 +95,10 @@ Categories define methods of an existing class and are typically used to add the
 - Background state is where the app is in the background and executing code. Apps typically enter this state on their way to being suspended. Apps that require extra execution time may remain in this screen longer. Apps being launched directly into the background enters this state instead of inactive state.
 - Suspended state is where the app is in the background but it is not executing code. Apps will remain in memory, but are removed by the system if low-memory condition occurs in order to make more space for foreground apps.
 
+**Is it faster to iterate through an NSArray or an NSSet?**
+
+It depends. NSSet is faster to iterate through if the order of the items in the collection is not important. The reason is because NSSet uses hash values in order to find items while NSArray has to iterate through its entire contents to find a particular object. ([Source - #25](https://medium.com/cocoaacademymag/25-ios-interview-questions-and-answers-for-junior-developers-19bfe6e99b0))
+
 ## Memory / Memory Management
 
 **What is the difference between *copy* and *retain*?**
@@ -149,7 +159,7 @@ The reuseIdentifier indicates that cells for a UITableView (or UICollectionView)
 
 **I detected a typo or an incorrect answer to one of your questions**
 
-Great! Opening an issue or even making the changes yourself and making a pull request would be greatly appreciated! 
+Great! Opening or even making the changes yourself and making a pull request would be greatly appreciated! 
 
 **Requesting questions to be answered and topics**
 
