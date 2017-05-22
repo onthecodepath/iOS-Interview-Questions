@@ -10,7 +10,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 ## Table of Contents
 
-- [Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#design-pattern)
+- [Architecture / Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#design-pattern)
     - What is Singleton Pattern?
     - What is the delegation pattern?
     - What is MVC?
@@ -21,7 +21,6 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [General / Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
     - What is the difference between a class and an object?
     - What is JSON?
-    - What is the difference between _name vs self.name?
     - What is a category and when is it used?
     - What is the difference between not-running, inactive, active, background and suspended execution states?
     - Is it faster to iterate through an NSArray or an NSSet?
@@ -35,6 +34,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [Objective-C](https://github.com/onthecodepath/iOS-Interview-Questions#objective-c)
     - What is synthesize in Objective-C?
     - What is dynamic in Objective-C?
+    - What is the difference between _name vs self.name?
 - [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#swift)
     - What is the difference between var and let?
     - What is the difference between a struct and a class?
@@ -56,7 +56,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 # Interview Questions
 
-## Design Pattern
+## Architecture / xDesign Pattern
 
 **What is Singleton Pattern?**
 
@@ -98,12 +98,6 @@ In the simplest sense, a class is a blueprint for an object. It describes the pr
 **What is JSON?**
 
 JSON stands for JavaScript Object Notation. According to [wiki](https://en.wikipedia.org/wiki/JSON), it is a file format that uses human-readable text to transmite data objects consisting of attribute-value pairs and array data types. 
-
-**What is the difference between _ vs self. in Objective-C?**
-
-You typically use either when accessing a property in Objective-C. When you use _, you're referencing the actual instance variable directly. You should avoid this. Instead, you should use self. to ensure that any getter/setter actions are honored. 
-
-In the case that you would write your own setter method, using _ would not call that setter method. Using self. on the property, however, would call the setter method you implemented. '
 
 **What is a category and where is it used?**
 
@@ -165,6 +159,12 @@ The method synthesize generates getter and setter methods for your property.
 **What is dynamic in Objective-C?**
 
 Dynamic is used for subclasses of NSManagedObject. @dynamic can also be used to delegate the responsibility of implementing the accessors. ([source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+
+**What is the difference between _ vs self. in Objective-C?**
+
+You typically use either when accessing a property in Objective-C. When you use _, you're referencing the actual instance variable directly. You should avoid this. Instead, you should use self. to ensure that any getter/setter actions are honored. 
+
+In the case that you would write your own setter method, using _ would not call that setter method. Using self. on the property, however, would call the setter method you implemented. 
 
 ## Swift
 
