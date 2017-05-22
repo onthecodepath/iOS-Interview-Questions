@@ -129,9 +129,9 @@ ARC stands for Automatic Reference Counting. Unlike many other programming langa
 **What is the difference between *weak* and *strong*?**
 
 - Strong means that the reference count will be increased and the reference to it will be maintained through the life of the object.
-- Weak, means that we are pointing to an object but not increasing its reference count. It’s often used when creating a parent child relationship. The parent has a strong reference to the child but the child only has a weak reference to the parent. ([Source])(https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a)
+- Weak, means that we are pointing to an object but not increasing its reference count. It’s often used when creating a parent child relationship. The parent has a strong reference to the child but the child only has a weak reference to the parent. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
 
-Common instances of *weak* references are delegate properties and subview/controls of a view controller's main view since those views are already strongly held by the main view. [source](http://stackoverflow.com/questions/11013587/differences-between-strong-and-weak-in-objective-c)
+Common instances of *weak* references are delegate properties and subview/controls of a view controller's main view since those views are already strongly held by the main view. ([source](http://stackoverflow.com/questions/11013587/differences-between-strong-and-weak-in-objective-c))
 
 **What is a memory leak?**
 
