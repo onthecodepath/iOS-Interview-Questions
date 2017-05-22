@@ -1,6 +1,8 @@
-# iOS-Interview-Questions
+# Hello fellow iOS Developers!
 
-An open-source collection of iOS interview questions and answers. These concepts are important especially for beginner developer to learn and understand.
+## What is this for?
+
+It's as straight-forward as the repository name is. This is intended to be an open-source collection of iOS interview questions accompanied with answers for your convenience. 
 
 - [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
@@ -26,6 +28,8 @@ An open-source collection of iOS interview questions and answers. These concepts
     - What is the purpose of unit testing? What are the benefits?
 - [View / Storyboard](https://github.com/onthecodepath/iOS-Interview-Questions#view--storyboard)
     - What is the difference between frame and bound of a UIView?
+
+# Interview Questions
 
 ## Core Data
 **What is Core Data?**
@@ -129,7 +133,11 @@ Unit/UI testing are the basic of test-driven development. This development appro
 
 The *frame* of a UIView is the region relative to the superview it is contained within while the *bounds* of a UIView is the region relative to its own coordinate system.
 
+# Contributing
 
+## Hey! I detected a typo or an incorrect answer to one of your questions
+
+Great! Opening an issue or even making the changes yourself and making a pull request would be greatly appreciated! 
 
 
 
