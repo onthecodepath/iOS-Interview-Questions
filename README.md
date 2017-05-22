@@ -157,9 +157,9 @@ The reuseIdentifier indicates that cells for a UITableView (or UICollectionView)
 
 # Contributing
 
-**I detected a typo or an incorrect answer to one of your questions**
+**There's a typo / an incorrect answer to one of your questions**
 
-Great! Opening or even making the changes yourself and making a pull request would be greatly appreciated! 
+Great! Creating an issue will let me know what changes should be made. You can even making the changes yourself and make a pull request which will expedite the process!
 
 **Requesting questions to be answered and topics**
 
