@@ -35,7 +35,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [Objective-C](https://github.com/onthecodepath/iOS-Interview-Questions#objective-c)
     - What is synthesize in Objective-C?
     - What is dynamic in Objective-C?
-- [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#Swift)
+- [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#swift)
     - What is the difference between var and let?
     - What is the difference between a struct and a class?
     - What is the difference between implicit and explicit?
@@ -187,7 +187,7 @@ When referring to something as implicit or explicit, it is often referring to ho
 ```
 var name: String = "onthecodepath" // explicit
 var name = "onthecodepath" // implicit
-``
+```
 
 In the first line above, the name variable is *explicitly* declared since the type of the variable follows the name of the variable. In the second line, the String type is not explicitly declared. However, Swift is able to infer that name is of a String type since the value that it is being set as is of a String type.
 
