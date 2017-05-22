@@ -18,7 +18,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
     - What is an object managed context?
-- [General/Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
+- [General / Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
     - What is the difference between a class and an object?
     - What is JSON?
     - What is the difference between _name vs self.name?
@@ -48,6 +48,8 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [View / Storyboard](https://github.com/onthecodepath/iOS-Interview-Questions#view--storyboard)
     - What is the difference between frame and bound of a UIView?
     - What is the reuseIdentifier for?
+- Algorithm Resources
+- Contributing
 
 # Interview Questions
 
@@ -209,6 +211,12 @@ The *frame* of a UIView is the region relative to the superview it is contained 
 **What is the reuseIdentifier for?**
 
 The reuseIdentifier indicates that cells for a UITableView (or UICollectionView) can be reused. UITableView maintains an internal cache of UITableViewCell with the appropriate identifier and allows them to be reused when dequeueForCellWithReuseIdentifier is called. As a result, this increases performance of UITableView since a new view does not have to be created for a cell.
+
+# Algorithm Resources
+
+**[EKAlgorithm](https://github.com/EvgenyKarkan/EKAlgorithms)**: Algorithm and data structures in Objc
+
+**[swift-algorithm-club](https://github.com/raywenderlich/swift-algorithm-club)**: Algorithm and data structures in Swift
 
 # Contributing
 
