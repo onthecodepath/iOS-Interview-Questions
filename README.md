@@ -17,7 +17,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
-    - What is an object managed context?
+    - What is a managed object context?
 - [General / Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
     - What is the difference between a class and an object?
     - What is JSON?
@@ -70,9 +70,9 @@ The delegation pattern is a powerful pattern used in building iOS applications. 
 MVC stands for **Model-View-Controller**. It is a software architecture pattern for implementing user interfaces. 
 
 MVC consists of three layers: the model, the view, and the controller.
-- The model layer is typically where the data resides (persistence, model objects, etc)
-- The view layer is typically where all the UI interface lies. Things like displaying buttons and numbers belong in the view layer. The view layer does not know anything about the model layer and vice versa.
-- The controller (view controller) is the layer that integrates the view layer and the model layer together. 
+- The *model layer* is typically where the data resides (persistence, model objects, etc)
+- The *view layer* is typically where all the UI interface lies. Things like displaying buttons and numbers belong in the view layer. The view layer does not know anything about the model layer and vice versa.
+- The *controller (view controller)* is the layer that integrates the view layer and the model layer together. 
 
 ## Core Data
 
@@ -128,8 +128,10 @@ ARC stands for Automatic Reference Counting. Unlike many other programming langa
 
 **What is the difference between *weak* and *strong*?**
 
-- Strong means that the reference count will be increased and the reference to it will be maintained through the life of the object.
-- Weak, means that we are pointing to an object but not increasing its reference count. It’s often used when creating a parent child relationship. The parent has a strong reference to the child but the child only has a weak reference to the parent. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+First, objects are *strong* by default.
+
+- *Strong* means that the reference count will be increased and the reference to it will be maintained through the life of the object. 
+- *Weak*, means that we are pointing to an object but not increasing its reference count. It’s often used when creating a parent child relationship. The parent has a strong reference to the child but the child only has a weak reference to the parent. ([Source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
 
 Common instances of *weak* references are delegate properties and subview/controls of a view controller's main view since those views are already strongly held by the main view. ([source](http://stackoverflow.com/questions/11013587/differences-between-strong-and-weak-in-objective-c))
 
@@ -212,7 +214,7 @@ The *frame* of a UIView is the region relative to the superview it is contained 
 
 **What is the reuseIdentifier for?**
 
-The reuseIdentifier indicates that cells for a UITableView (or UICollectionView) can be reused. UITableView maintains an internal cache of UITableViewCell with the appropriate identifier and allows them to be reused when dequeueForCellWithReuseIdentifier is called. As a result, this increases performance of UITableView since a new view does not have to be created for a cell.
+The *reuseIdentifier* indicates that cells for a UITableView (or UICollectionView) can be reused. UITableView maintains an internal cache of UITableViewCell with the appropriate identifier and allows them to be reused when dequeueForCellWithReuseIdentifier is called. As a result, this increases performance of UITableView since a new view does not have to be created for a cell.
 
 # Algorithm Resources
 
