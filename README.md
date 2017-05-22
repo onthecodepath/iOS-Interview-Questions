@@ -31,6 +31,7 @@ It's as straight-forward as the repository name is. This is intended to be an op
     - What is the purpose of unit testing? What are the benefits?
 - [View / Storyboard](https://github.com/onthecodepath/iOS-Interview-Questions#view--storyboard)
     - What is the difference between frame and bound of a UIView?
+    - What is the reuseIdentifier for?
 
 # Interview Questions
 
@@ -139,6 +140,10 @@ Unit/UI testing are the basic of test-driven development. This development appro
 **What is the difference between frame and bound of a UIView?**
 
 The *frame* of a UIView is the region relative to the superview it is contained within while the *bounds* of a UIView is the region relative to its own coordinate system.
+
+**What is the reuseIdentifier for?**
+
+The reuseIdentifier indicates that cells for a UITableView (or UICollectionView) can be reused. UITableView maintains an internal cache of UITableViewCell with the appropriate identifier and allows them to be reused when dequeueForCellWithReuseIdentifier is called. As a result, this increases performance of UITableView since a new view does not have to be created for a cell.
 
 # Contributing
 
