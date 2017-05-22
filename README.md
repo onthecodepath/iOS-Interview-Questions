@@ -49,6 +49,8 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is the difference between frame and bound of a UIView?
     - What is the reuseIdentifier for?
 - Algorithm Resources
+    - EKAlgorithm
+    - swift-algorithm-club
 - Contributing
 
 # Interview Questions
