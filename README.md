@@ -10,7 +10,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 ## Table of Contents
 
-- [Architecture / Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#architecture--xdesign-pattern)
+- [Architecture / Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#architecture--design-pattern)
     - What is Singleton Pattern?
     - What is the delegation pattern?
     - What is MVC?
