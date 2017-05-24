@@ -25,6 +25,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is a category and when is it used?
     - What is the difference between not-running, inactive, active, background and suspended execution states?
     - Is it faster to iterate through an NSArray or an NSSet?
+    - What is KVO?
 - [Memory / Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory--memory-management)
     - What is ARC?
     - What is the difference between *weak* and *strong*?
@@ -36,6 +37,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is synthesize in Objective-C?
     - What is dynamic in Objective-C?
     - What is the difference between _name vs self.name?
+    - What are blocks in Objective-C?
 - [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#swift)
     - What is the difference between var and let?
     - What is the difference between a struct and a class?
@@ -124,6 +126,10 @@ Categories define methods of an existing class and are typically used to add the
 
 It depends. NSSet is faster to iterate through if the order of the items in the collection is not important. The reason is because NSSet uses hash values in order to find items while NSArray has to iterate through its entire contents to find a particular object. ([source - #25](https://medium.com/cocoaacademymag/25-ios-interview-questions-and-answers-for-junior-developers-19bfe6e99b0))
 
+#### What is KVO?
+
+KVO stands for *Key-Value Observing*. It allows a controller or class to *observe* when a property value changes. 
+
 ## Memory / Memory Management
 
 #### What is ARC?
@@ -174,6 +180,18 @@ Dynamic is used for subclasses of NSManagedObject. @dynamic can also be used to 
 You typically use either when accessing a property in Objective-C. When you use _, you're referencing the actual instance variable directly. You should avoid this. Instead, you should use self. to ensure that any getter/setter actions are honored. 
 
 In the case that you would write your own setter method, using _ would not call that setter method. Using self. on the property, however, would call the setter method you implemented. 
+
+#### What are blocks in Objective-C?
+
+Blocks are a language-level feature of Objective (C and C++ too). They are objects that allow you to create distinct segments of code that can be passed around to methods or functions as if they were values. This means that a block is capable of being added to collections such as NSArray or NSDictionary. Blocks are also able to take arguments and return values similar to methods and functions.
+
+The syntax to define a block literal uses the caret symbol(^):
+
+```
+^{
+  NSLog(@"This is an example of a block"
+}
+```
 
 ## Swift
 
