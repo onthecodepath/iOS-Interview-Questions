@@ -15,7 +15,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is the delegation pattern?
     - What is MVC?
     - What is MVVM?
-- [Code Questions]()
+- [Code Questions](https://github.com/onthecodepath/iOS-Interview-Questions#code-questions)
 - [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
