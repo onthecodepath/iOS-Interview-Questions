@@ -28,7 +28,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - Is it faster to iterate through an NSArray or an NSSet?
     - What is KVO?
 - [Memory / Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory--memory-management)
-    - What is ARC?
+    - What is memory management handled on iOS?
     - What is the difference between *weak* and *strong*?
     - What is a memory leak?
     - What is a retain cycle?
@@ -164,9 +164,9 @@ KVO stands for *Key-Value Observing*. It allows a controller or class to *observ
 
 ## Memory / Memory Management
 
-#### What is ARC?
+#### What is memory management handled on iOS?
 
-ARC stands for Automatic Reference Counting. Unlike many other programming langauges that have a garbage collector, Objective-C and Swift use a memory-management that tracks and manages your app's memory usage. Unlike garbage collection, ARC does not handle reference cycles automatically. As long as an object has *strong* references to it, it will not be deallocated. 
+iOS uses something called ARC which stands for Automatic Reference Counting. When an object is said to have a strong reference to it, ARC increase its retain count by 1. When the retain count of an object reaches 0, the object will typically be deallocated if there are no more strong references to it. Unlike garbage collection, ARC does not handle reference cycles automatically. 
 
 #### What is the difference between *weak* and *strong*?
 
