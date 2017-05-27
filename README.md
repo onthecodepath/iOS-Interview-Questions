@@ -15,6 +15,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - When would you use Core Data over NSUserDefault?
     - What is a managed object context?
 - [Debugging](https://github.com/onthecodepath/iOS-Interview-Questions#debugging)
+    - What are some ways of debugging in iOS?
 - [Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#design-patterns)
     - What is Singleton Pattern?
     - What is the delegation pattern?
@@ -76,6 +77,12 @@ NSUserDefault is typically used to store small bits of data (settings, preferenc
 First, managed object context is an instance of NSManagedObjectContext. It is the central object in the Core Data stack. It is used to create and fetch managed objects, and to manage undo and redo operations. Although it is allowed to have multiple managed object contexts, there is typically at most one managed object to represent any given record in a persistent store.
 
 ## Debugging
+
+#### What are some ways of debugging in iOS?
+
+    - NSLog and print functions can be used for output into console.
+    - Breakpoints can also be used together with the Debug bar and Variables view as an alternative.
+    - Senior devs often use other tools such as Instruments and Crash Logs instead of the two above.
 
 ## Design Patterns
 
