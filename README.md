@@ -15,14 +15,13 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is the delegation pattern?
     - What is MVC?
     - What is MVVM?
-- [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
+- [Database](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
     - What is a managed object context?
 - [General / Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
     - What is the difference between a class and an object?
     - What is JSON?
-    - What is a category and when is it used?
     - What is the difference between not-running, inactive, active, background and suspended execution states?
     - Is it faster to iterate through an NSArray or an NSSet?
     - What is KVO?
@@ -38,6 +37,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is dynamic in Objective-C?
     - What is the difference between _name vs self.name?
     - What are blocks in Objective-C?
+    - What is the difference between category and extension in Objective-c?
 - [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#swift)
     - What is the difference between var and let?
     - What is the difference between a struct and a class?
@@ -47,7 +47,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is the difference between a stack vs a heap?
     - What is GCD?
     - Explain the difference between Serial vs Concurrent.
-- [Unit Testing](https://github.com/onthecodepath/iOS-Interview-Questions#unit-testing)
+- [Unit Testing / UI Testing](https://github.com/onthecodepath/iOS-Interview-Questions#unit-testing)
     - What is the purpose of unit testing? What are the benefits?
 - [View / Storyboard](https://github.com/onthecodepath/iOS-Interview-Questions#view--storyboard)
     - What is the difference between frame and bound of a UIView?
@@ -109,10 +109,6 @@ In the simplest sense, a class is a blueprint for an object. It describes the pr
 #### What is JSON?
 
 JSON stands for JavaScript Object Notation. According to [wiki](https://en.wikipedia.org/wiki/JSON), it is a file format that uses human-readable text to transmite data objects consisting of attribute-value pairs and array data types. 
-
-#### What is a category and where is it used?
-
-Categories define methods of an existing class and are typically used to add them to an existing class. That class would then have access to the same methods without having access to the source code and thus, would be unable to make changes to the methods. In Objective-C, this is typically performed in the header file.
 
 #### What is the difference between not-running, inactive, active, background and suspended execution states?**
 
@@ -192,6 +188,10 @@ The syntax to define a block literal uses the caret symbol(^):
   NSLog(@"This is an example of a block"
 }
 ```
+
+#### What is the difference between category and extension in Objective-c?
+
+A category and extension are similar in functionality where they can add additional instance and class methods to a class. However, an extension can only do so if the source code for the class being extended is available at compile time. This means that classes such as NSString cannot be extended. Instead, a category would be used to add additional methods to the NSString class
 
 ## Swift
 
