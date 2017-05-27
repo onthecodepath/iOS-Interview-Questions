@@ -48,13 +48,14 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
     - What is the difference between atomic and non-atomic synthesized properties?
     - What is the difference between a stack vs a heap?
-    - What is GCD?
+    - What is GCD and how is it used?
     - Explain the difference between Serial vs Concurrent.
 - [Unit Testing / UI Testing](https://github.com/onthecodepath/iOS-Interview-Questions#unit-testing--ui-testing)
     - What is the purpose of unit testing? What are the benefits?
 - [View / Storyboard](https://github.com/onthecodepath/iOS-Interview-Questions#view--storyboard)
     - What is the difference between frame and bound of a UIView?
     - What is the reuseIdentifier for?
+    - What is autolayout?
 - [Algorithm Resources](https://github.com/onthecodepath/iOS-Interview-Questions#algorithm-resources)
     - EKAlgorithm
     - swift-algorithm-club
@@ -241,7 +242,7 @@ First, properties are set to *atomic* by default.
 
 *Non-atomic* properties, howeer are not thread-safe. While they run faster, they may cause race conditions. In the event that accessor methods are called simultaneously and a race condition occurs, a setter value would first release the old value and a getter method would retrieve nil since no value has not been set yet.
 
-#### What is GCD?
+#### What is GCD and how is it used?
 
 GCD stands for Grand Central Dispatch. According to [Ray Wenderlich](https://www.raywenderlich.com/60749/grand-central-dispatch-in-depth-part-1), it offers the following benefits
 - Improving your app's responsiveness by helping to defer computationally expensive tasks and run them in the background.
