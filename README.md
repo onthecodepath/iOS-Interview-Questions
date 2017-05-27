@@ -10,15 +10,16 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 ## Table of Contents
 
-- [Architecture / Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#architecture--design-pattern)
-    - What is Singleton Pattern?
-    - What is the delegation pattern?
-    - What is MVC?
-    - What is MVVM?
 - [Database](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
     - What is a managed object context?
+- [Debugging]()
+- [Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#design-patterns)
+    - What is Singleton Pattern?
+    - What is the delegation pattern?
+    - What is MVC?
+    - What is MVVM?
 - [General / Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
     - What is the difference between a class and an object?
     - What is JSON?
@@ -32,6 +33,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is a retain cycle?
     - What is the difference between copy and retain?
     - What is the difference between a stack vs a heap?
+- [Networking]()
 - [Objective-C](https://github.com/onthecodepath/iOS-Interview-Questions#objective-c)
     - What is synthesize in Objective-C?
     - What is dynamic in Objective-C?
@@ -47,7 +49,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is the difference between a stack vs a heap?
     - What is GCD?
     - Explain the difference between Serial vs Concurrent.
-- [Unit Testing / UI Testing](https://github.com/onthecodepath/iOS-Interview-Questions#unit-testing)
+- [Unit Testing / UI Testing](https://github.com/onthecodepath/iOS-Interview-Questions#unit-testing--ui-testing)
     - What is the purpose of unit testing? What are the benefits?
 - [View / Storyboard](https://github.com/onthecodepath/iOS-Interview-Questions#view--storyboard)
     - What is the difference between frame and bound of a UIView?
