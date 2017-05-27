@@ -15,7 +15,6 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is the delegation pattern?
     - What is MVC?
     - What is MVVM?
-- [Code Questions](https://github.com/onthecodepath/iOS-Interview-Questions#code-questions)
 - [Core Data](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
@@ -86,37 +85,6 @@ MVVM stands for **Model-View-ViewModel**. It is a software architecture pattern 
 MVVM is an augmented version of MVC where the presentation logic is moved out of the controller and into the view model. The view model is responsible for handling most, if not all, of the view's display logic. 
 
 A common occurence in MVC is where you have a massive-view-controller (some joke this is what MVC stands for). In order to shrink the size of your view controller and make the logic and readibility of your code easier to follow along, the MVVM will be used. 
-
-## Code Questions
-
-#### Spot the bug that occurs in the code:
-
-```
-@interface MyCustomController : UIViewController  
-
-@property (strong, nonatomic) UILabel *alert;  
-
-@end  
-
-@implementation MyCustomController  
-
-- (void)viewDidLoad {
-  CGRect frame = CGRectMake(100, 100, 100, 50);
-  self.alert = [[UILabel alloc] initWithFrame:frame];
-  self.alert.text = @"Please wait...";
-  [self.view addSubview:self.alert];
-  dispatch_async(
-    dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
-    ^{
-      sleep(10);
-      self.alert.text = @"Waiting over";
-      }
-    ); 
-}  
-```
-
-All UI updates must be performed on the main thread. Global dispatch queues do not make any guarantees so code should be modified to run the UI update on the main thread.
-
 
 ## Core Data
 
@@ -270,6 +238,34 @@ GCD stands for Grand Central Dispatch. According to [Ray Wenderlich](https://www
 #### Explain the difference between Serial vs Concurrent
 
 Tasks executed *serially* are executed one at a time while tasks that are executed *concurrently* may be executed at the same time.
+
+#### Spot the bug that occurs in the code:
+
+```
+@interface MyCustomController : UIViewController  
+
+@property (strong, nonatomic) UILabel *alert;  
+
+@end  
+
+@implementation MyCustomController  
+
+- (void)viewDidLoad {
+  CGRect frame = CGRectMake(100, 100, 100, 50);
+  self.alert = [[UILabel alloc] initWithFrame:frame];
+  self.alert.text = @"Please wait...";
+  [self.view addSubview:self.alert];
+  dispatch_async(
+    dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+    ^{
+      sleep(10);
+      self.alert.text = @"Waiting over";
+    }
+  ); 
+}  
+```
+
+All UI updates must be performed on the main thread. Global dispatch queues do not make any guarantees so code should be modified to run the UI update on the main thread. 
 
 ## Unit Testing
 
