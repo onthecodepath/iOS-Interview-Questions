@@ -59,7 +59,21 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 # Interview Questions
 
-## Architecture / Design Pattern
+## Database
+
+#### What is Core Data?
+
+In Apple's [words](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreData/index.html?utm_source=iosstash.io), "Core Data is a framework that you use to manage the model layer objects in your application. It provides generalized and automated solutions to common tasks associated with object life cycle and object graph management, including persistence."
+
+#### When would you use Core Data over NSUserDefault?
+
+NSUserDefault is typically used to store small bits of data (settings, preferences, etc.). Core Data is used to store a large list of elements. 
+
+#### What is a managed object context?
+
+First, managed object context is an instance of NSManagedObjectContext. It is the central object in the Core Data stack. It is used to create and fetch managed objects, and to manage undo and redo operations. Although it is allowed to have multiple managed object contexts, there is typically at most one managed object to represent any given record in a persistent store.
+
+## Design Patterns
 
 #### What is Singleton Pattern?
 
@@ -85,20 +99,6 @@ MVVM stands for **Model-View-ViewModel**. It is a software architecture pattern 
 MVVM is an augmented version of MVC where the presentation logic is moved out of the controller and into the view model. The view model is responsible for handling most, if not all, of the view's display logic. 
 
 A common occurence in MVC is where you have a massive-view-controller (some joke this is what MVC stands for). In order to shrink the size of your view controller and make the logic and readibility of your code easier to follow along, the MVVM will be used. 
-
-## Core Data
-
-#### What is Core Data?
-
-In Apple's [words](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreData/index.html?utm_source=iosstash.io), "Core Data is a framework that you use to manage the model layer objects in your application. It provides generalized and automated solutions to common tasks associated with object life cycle and object graph management, including persistence."
-
-#### When would you use Core Data over NSUserDefault?
-
-NSUserDefault is typically used to store small bits of data (settings, preferences, etc.). Core Data is used to store a large list of elements. 
-
-#### What is a managed object context?
-
-First, managed object context is an instance of NSManagedObjectContext. It is the central object in the Core Data stack. It is used to create and fetch managed objects, and to manage undo and redo operations. Although it is allowed to have multiple managed object contexts, there is typically at most one managed object to represent any given record in a persistent store.
 
 ## General / Uncategorized
 
@@ -267,7 +267,7 @@ Tasks executed *serially* are executed one at a time while tasks that are execut
 
 All UI updates must be performed on the main thread. Global dispatch queues do not make any guarantees so code should be modified to run the UI update on the main thread. 
 
-## Unit Testing
+## Unit Testing / UI Testing
 
 #### What is the purpose of unit/UI testing? What are the benefits?
 
