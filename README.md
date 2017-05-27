@@ -248,6 +248,8 @@ GCD stands for Grand Central Dispatch. According to [Ray Wenderlich](https://www
 - Providing an easier concurrency model than locks and threads and helps to avoid concurrency bugs.
 - Potentially optimize your code with higher performance primitives for common patterns such as singletons.
 
+In other words, GCD provides and manages queues of tasks in the iOS app. This is one of the most commonly used API to manage concurrent code and execute operations asynchronously. Network calls are often performed on a background thread while things like UI updates are executed on the main thread.
+
 #### Explain the difference between Serial vs Concurrent
 
 Tasks executed *serially* are executed one at a time while tasks that are executed *concurrently* may be executed at the same time.
@@ -295,6 +297,10 @@ The *frame* of a UIView is the region relative to the superview it is contained 
 #### What is the reuseIdentifier for?
 
 The *reuseIdentifier* indicates that cells for a UITableView (or UICollectionView) can be reused. UITableView maintains an internal cache of UITableViewCell with the appropriate identifier and allows them to be reused when dequeueForCellWithReuseIdentifier is called. As a result, this increases performance of UITableView since a new view does not have to be created for a cell.
+
+#### What is autolayout?
+
+Auto Layout is used to dynamically calculate the size and position of views based on constraints.
 
 # Algorithm Resources
 
