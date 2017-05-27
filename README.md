@@ -75,6 +75,8 @@ NSUserDefault is typically used to store small bits of data (settings, preferenc
 
 First, managed object context is an instance of NSManagedObjectContext. It is the central object in the Core Data stack. It is used to create and fetch managed objects, and to manage undo and redo operations. Although it is allowed to have multiple managed object contexts, there is typically at most one managed object to represent any given record in a persistent store.
 
+## Debugging
+
 ## Design Patterns
 
 #### What is Singleton Pattern?
@@ -162,6 +164,8 @@ When you *retain* an object, you share the same version with whoever passed the 
 A stack is a region of memory where data is added or removed in a last-in-first-out (LIFO) order. According to [Ates Goral](http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap), it is the memory set aside as scratch space for a thread of execution. Meanwhile the heap is memory set aside for dynamic allocation. Unlike the stack, you can allocate a block at any time and free it at anytime. 
 
 Note: In Objective-C, all objects are always allocated on the heap, or at least should be treated as if on the heap. 
+
+## Networking
 
 ## Objective-C
 
