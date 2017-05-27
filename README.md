@@ -14,7 +14,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
     - What is a managed object context?
-- [Debugging]()
+- [Debugging](https://github.com/onthecodepath/iOS-Interview-Questions#debugging)
 - [Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#design-patterns)
     - What is Singleton Pattern?
     - What is the delegation pattern?
@@ -33,7 +33,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is a retain cycle?
     - What is the difference between copy and retain?
     - What is the difference between a stack vs a heap?
-- [Networking]()
+- [Networking](https://github.com/onthecodepath/iOS-Interview-Questions#networking)
 - [Objective-C](https://github.com/onthecodepath/iOS-Interview-Questions#objective-c)
     - What is synthesize in Objective-C?
     - What is dynamic in Objective-C?
