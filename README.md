@@ -41,7 +41,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is dynamic in Objective-C?
     - What is the difference between _name vs self.name?
     - What are blocks in Objective-C?
-    - What is the difference between category and extension in Objective-c?
+    - What is the difference between category and extension in Objective-C?
 - [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#swift)
     - What is the difference between var and let?
     - What is the difference between a struct and a class?
@@ -219,7 +219,7 @@ The syntax to define a block literal uses the caret symbol(^):
 }
 ```
 
-#### What is the difference between category and extension in Objective-c?
+#### What is the difference between category and extension in Objective-C?
 
 A category and extension are similar in functionality where they can add additional instance and class methods to a class. However, an extension can only do so if the source code for the class being extended is available at compile time. This means that classes such as NSString cannot be extended. Instead, a category would be used to add additional methods to the NSString class
 
