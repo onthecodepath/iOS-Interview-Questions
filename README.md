@@ -43,6 +43,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What are blocks in Objective-C?
     - What is the difference between category and extension in Objective-C?
 - [Swift](https://github.com/onthecodepath/iOS-Interview-Questions#swift)
+    - What is the difference between public and open? Why is it important to have both?
     - What is the difference between var and let?
     - What is the difference between a struct and a class?
     - What is the difference between implicit and explicit?
