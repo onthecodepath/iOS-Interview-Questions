@@ -225,6 +225,12 @@ A category and extension are similar in functionality where they can add additio
 
 ## Swift
 
+#### What is the difference between public and open? Why is it important to have both?
+
+Open access imposes limitations on class inheritance. Classes declared with open level access can be subclassed by modules they are defined in, modules that import the module in which the class is defined, and class members as well. While this sounds similar to the public access level defined in Swift 2, there is a small difference. In Swift 3, the meaning of public access level means that classes declared public can only be subclassed in the module they are defined in. This includes public class members which can be overridden by subclasses defined int he module they are defined in.
+
+Some classes of libraries and frameworks are not designed to be subclasses. For example, in the Core Data framework, Apple states that some methods of NSManagedObject should not be overridden. To prevent any unexpected behavior that may result from overriding those methods, Apple declares those methods public rather than open. As a result, those methods are not marked as open for developers to override. ([source](https://cocoacasts.com/what-is-the-difference-between-public-and-open-in-swift-3/))
+
 #### What is the difference between *var* and *let*?
 
 *var* is a variable that can be changed while *let* denotes a constant that cannot be changed once set.
