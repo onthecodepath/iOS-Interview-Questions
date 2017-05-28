@@ -22,6 +22,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is MVC?
     - What is MVVM?
 - [General / Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
+    - What is waterfall methodology and Agile methodology? What are the differences between them?
     - What is the difference between a class and an object?
     - What is JSON?
     - What is the difference between not-running, inactive, active, background and suspended execution states?
@@ -113,6 +114,21 @@ MVVM is an augmented version of MVC where the presentation logic is moved out of
 A common occurence in MVC is where you have a massive-view-controller (some joke this is what MVC stands for). In order to shrink the size of your view controller and make the logic and readibility of your code easier to follow along, the MVVM will be used. 
 
 ## General / Uncategorized
+
+#### What is waterfall methodology and Agile methodology? What are the differences between them?
+
+Waterfall methodology is a sequential model for software development. It is separated into a sequence of pre-defined phases including feasibility, planning, design, build, test, production, and support.
+
+On the other hand, Agile development methodology is a linear sequential apporach that provides flexibility for changing project requirements.
+
+List of differences:
+- Waterfall model divides software development process into different phases while Agile segregates the project development lifecycle into sprints. This makes waterfall more rigid while agile allows for more flexibility
+- Waterfall model describes the software development life cycle as a single project while Agile considers it as a collection of many different projects; are iterations of different phases focusing on improving overall software quality with feedback from users and QA team.
+- Since waterfall is more rigid, development requirements need to be clearly established beforehand since there is little flexibility for changing once project development starts. Meanwhile, Agile allow changes to be made anytime along the project development process even after initial planning has been completed.
+- In Waterfall, the testing phase typically occurs after the build phase. In Agile, testing is often performed concurrently with programming or at least in the same iteration.
+- Waterfall is more of an interal process that does not involve user feedback. Agile tends to involve user participation more in order to improve customer satisfaction.
+- Waterfall model best fits projects that have a clearly defined set of requirements and where change to requirements is not expect. Agile fits more for projects where the requirements are expected to change and evolve.
+- Waterfall can exhibit a project mindset that focuses on completion of the project while Agile can allow for more focus on developing a product that satisfies customers.
 
 #### What is the difference between a class and an object?
 
