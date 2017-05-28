@@ -49,7 +49,6 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is the difference between implicit and explicit?
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
     - What is the difference between atomic and non-atomic synthesized properties?
-    - What is the difference between a stack vs a heap?
     - What is GCD and how is it used?
     - Explain the difference between Serial vs Concurrent.
 - [Unit Testing / UI Testing](https://github.com/onthecodepath/iOS-Interview-Questions#unit-testing--ui-testing)
