@@ -214,9 +214,11 @@ Blocks are a language-level feature of Objective (C and C++ too). They are objec
 The syntax to define a block literal uses the caret symbol(^):
 
 ```
+
 ^{
   NSLog(@"This is an example of a block"
 }
+
 ```
 
 #### What is the difference between category and extension in Objective-C?
@@ -303,7 +305,19 @@ Tasks executed *serially* are executed one at a time while tasks that are execut
 }  
 ```
 
-All UI updates must be performed on the main thread. Global dispatch queues do not make any guarantees so code should be modified to run the UI update on the main thread. 
+All UI updates must be performed on the main thread. Global dispatch queues do not make any guarantees so code should be modified to run the UI update on the main thread. Here is the fix below:
+
+```
+dispatch_async(		
+dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+^{
+sleep(10);
+dispatch_async(dispatch_get_main_queue(), ^{
+self.alert.text = @"Waiting over";
+});
+}); 
+
+```
 
 ## Unit Testing / UI Testing
 
