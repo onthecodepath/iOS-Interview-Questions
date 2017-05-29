@@ -49,6 +49,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is the difference between a struct and a class?
     - What is the difference between implicit and explicit?
 - [Thread Management](https://github.com/onthecodepath/iOS-Interview-Questions#thread-management)
+    - What is the difference between synchronous and asynchronous task?
     - What is the difference between atomic and non-atomic synthesized properties?
     - What is GCD and how is it used?
     - Explain the difference between Serial vs Concurrent.
@@ -274,6 +275,10 @@ var name = "onthecodepath" // implicit
 In the first line above, the name variable is *explicitly* declared since the type of the variable follows the name of the variable. In the second line, the String type is not explicitly declared. However, Swift is able to infer that name is of a String type since the value that it is being set as is of a String type.
 
 ## Thread Management
+
+#### What is the difference between synchronous and asynchronous task?
+
+Synchronous tasks wait until the task has been completed while asynchronous tasks can run in the background and send a notification when the task is complete.
 
 #### What is the difference between *atomic* and *non-atomic* synthesized properties?
 
