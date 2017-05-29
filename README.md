@@ -54,6 +54,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [Unit Testing / UI Testing](https://github.com/onthecodepath/iOS-Interview-Questions#unit-testing--ui-testing)
     - What is the purpose of unit testing? What are the benefits?
 - [View / Storyboard](https://github.com/onthecodepath/iOS-Interview-Questions#view--storyboard)
+    - What is the difference between viewDidLoad and viewDidAppear? Which should you use to load data from a remote server to display in the view?
     - What is the difference between frame and bound of a UIView?
     - What is the reuseIdentifier for?
     - What is autolayout?
@@ -326,6 +327,12 @@ self.alert.text = @"Waiting over";
 Unit/UI testing are the basic of test-driven development. This development approach allows you to codify requirements for your code before you implement it. Unit tests are important to make sure that code meets its design and requirements and behaves as expected. Parts of the program are segregated and tested to ensure that individual parts are working correctly. 
 
 ## View / Storyboard
+
+#### What is the difference between viewDidLoad and viewDidAppear? Which should you use to load data from a remote server to display in the view?
+
+viewDidLoad is only called when the view is loaded (after loadView is called). viewDidAppear, on the other hand, is called everytime the view appears on the device. 
+
+If the data is static for the most part, it can be loaded in viewDidLoad and achced. But if the data is dynamic and likely to change often, it is preferrable to use viewDidAppear. In both instances, data should be loaded asynchronously on a background thread to avoid blocking the UI.
 
 #### What is the difference between frame and bound of a UIView?
 
