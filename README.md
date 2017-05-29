@@ -22,6 +22,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is MVC?
     - What is MVVM?
 - [General / Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
+    - What is a protocol? How do you define your own protocol? 
     - What is waterfall methodology and Agile methodology? What are the differences between them?
     - What is the difference between a class and an object?
     - What is JSON?
@@ -115,6 +116,21 @@ MVVM is an augmented version of MVC where the presentation logic is moved out of
 A common occurence in MVC is where you have a massive-view-controller (some joke this is what MVC stands for). In order to shrink the size of your view controller and make the logic and readibility of your code easier to follow along, the MVVM will be used. 
 
 ## General / Uncategorized
+
+#### What is a protocol? How do you define your own protocol? 
+
+A protocol defines a list of required and optional methods for a class that adopts the protocol to implement. Any class is allowed to implement a protocol so that other classes can send message to it based on the protocol methods without knowing the type of class. An example of how a protocol is defined:
+
+```
+@protocol MyCustomDataSource
+- (NSUInteger)numberOfRecords;
+- (NSDictionary *)recordAtIndex:(NSUInteger)index;
+@optional
+- (NSString *)titleForRecordAtIndex:(NSUInteger)index;
+@end
+
+```
+A common instance protocols are used is providing a DataSource for UITableView or UICollectionView ([source](https://www.codementor.io/mattgoldspink/ios-interview-tips-questions-answers-objective-c-du1088nfb))
 
 #### What is waterfall methodology and Agile methodology? What are the differences between them?
 
