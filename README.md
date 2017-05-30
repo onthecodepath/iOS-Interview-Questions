@@ -30,6 +30,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - Is it faster to iterate through an NSArray or an NSSet?
     - What is KVO?
 - [Memory / Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory--memory-management)
+    - Why do you generally create a weak reference when using self in a block?
     - What is memory management handled on iOS?
     - What is the difference between *weak* and *strong*?
     - What is a memory leak?
@@ -71,7 +72,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 #### What is Core Data?
 
-In Apple's [words](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreData/index.html?utm_source=iosstash.io), "Core Data is a framework that you use to manage the model layer objects in your application. It provides generalized and automated solutions to common tasks associated with object life cycle and object graph management, including persistence."
+Core Data is a framework that is used to manage the model layer objects. It has the ability to persist object graphs to a persistent store.
 
 #### When would you use Core Data over NSUserDefault?
 
@@ -173,6 +174,10 @@ It depends. NSSet is faster to iterate through if the order of the items in the 
 KVO stands for *Key-Value Observing*. It allows a controller or class to *observe* when a property value changes. 
 
 ## Memory / Memory Management
+
+#### Why do you generally create a weak reference when using self in a block?
+
+Using a weak reference avoids retain cycles and memory leaks.
 
 #### What is memory management handled on iOS?
 
