@@ -26,7 +26,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is a protocol? How do you define your own protocol? 
     - What is waterfall methodology and Agile methodology? What are the differences between them?
     - What is the difference between a class and an object?
-    - What is JSON?
+    - What is JSON? What are the pros and cons?
     - What is the difference between not-running, inactive, active, background and suspended execution states?
     - Is it faster to iterate through an NSArray or an NSSet?
     - What is KVO?
@@ -160,9 +160,20 @@ List of differences:
 
 In the simplest sense, a class is a blueprint for an object. It describes the properties and behaviors common to any particular type of object. An object, on the other hand, is an instance of a class.
 
-#### What is JSON?
+#### What is JSON? What are the pros and cons?
 
 JSON stands for JavaScript Object Notation. According to [wiki](https://en.wikipedia.org/wiki/JSON), it is a file format that uses human-readable text to transmite data objects consisting of attribute-value pairs and array data types. 
+
+Pros:
+
+- It is lighter than XML meaning that it can represent the same data in XML in fewer bytes. This makes network transmissions and read/writes faster
+- Since it is native to JavaScript, computationally-expensive XSL tranformations are not needed in order to extract data
+
+Cons:
+
+- Not as widespread as XML
+- Data is not readily streamable and has to be broken up into individual objects
+- Can't use comments
 
 #### What is the difference between not-running, inactive, active, background and suspended execution states?**
 
