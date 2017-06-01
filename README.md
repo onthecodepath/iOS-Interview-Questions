@@ -22,6 +22,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - What is MVC?
     - What is MVVM?
 - [General / Uncategorized](https://github.com/onthecodepath/iOS-Interview-Questions#general--uncategorized)
+    - What considerations do you need when writing a UITableViewController which shows images downloaded from a remote server?
     - What is a protocol? How do you define your own protocol? 
     - What is waterfall methodology and Agile methodology? What are the differences between them?
     - What is the difference between a class and an object?
@@ -118,6 +119,12 @@ MVVM is an augmented version of MVC where the presentation logic is moved out of
 A common occurence in MVC is where you have a massive-view-controller (some joke this is what MVC stands for). In order to shrink the size of your view controller and make the logic and readibility of your code easier to follow along, the MVVM will be used. 
 
 ## General / Uncategorized
+
+#### What considerations do you need when writing a UITableViewController which shows images downloaded from a remote server?
+
+- Only download the image when the cell is scrolled into view (when cellForRowAtIndexPath is called)
+- Download the image asynchrnously on a backgorund thread so as not to block the UI so the user can keep scrolling
+- When the image has downloaded for a cell, check if that cell is still in the view or whether it has been re-used by another piece of data. If the cell has been re-used, then the image should be discarded. Otherwise, it should be switched back to the main thread to change the image on the cell. ([source](https://www.codementor.io/mattgoldspink/ios-interview-tips-questions-answers-objective-c-du1088nfb))
 
 #### What is a protocol? How do you define your own protocol? 
 
