@@ -11,6 +11,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 ## Table of Contents
 
 - [Database](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
+    - What is NSFetchRequest?
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
     - What is a managed object context?
@@ -70,6 +71,10 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 # Interview Questions
 
 ## Database
+
+#### What is NSFetchRequest?
+
+NSFetchRequest is the class responsible for fetching from Core Data. Fetch requests can be used to fetch a set of objects meeting a certain criteria, individual values and more. ([source](https://medium.com/ios-os-x-development/50-ios-interview-questions-and-answers-part-2-45f952230b9f))
 
 #### What is Core Data?
 
