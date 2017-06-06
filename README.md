@@ -92,9 +92,9 @@ First, managed object context is an instance of NSManagedObjectContext. It is th
 
 #### What are some ways of debugging in iOS?
 
-  - NSLog and print functions can be used for output into console.
-  - Breakpoints can also be used together with the Debug bar and Variables view as an alternative.
-  - Senior devs often use other tools such as Instruments and Crash Logs instead of the two above.
+- NSLog and print functions can be used for output into console.
+- Breakpoints can also be used together with the Debug bar and Variables view as an alternative.
+- Senior devs often use other tools such as Instruments and Crash Logs instead of the two above.
 
 ## Design Patterns
 
