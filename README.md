@@ -200,7 +200,7 @@ KVO stands for *Key-Value Observing*. It allows a controller or class to *observ
 
 #### Why do you generally create a weak reference when using self in a block?
 
-Using a weak reference avoids retain cycles and memory leaks.
+Sometimes it is necessary it capture self in a block such as when defining a callback block. However, since blocks maintain strong references to any captured objects including self, this may lead to a strong reference cycle and memory leak.
 
 #### What is memory management handled on iOS?
 
