@@ -202,6 +202,12 @@ KVO stands for *Key-Value Observing*. It allows a controller or class to *observ
 
 Sometimes it is necessary it capture self in a block such as when defining a callback block. However, since blocks maintain strong references to any captured objects including self, this may lead to a strong reference cycle and memory leak.
 
+Instead, capturing a weak reference to self is recommended in order to avoid this issue:
+
+```
+SomeBlock* __weak weakSelf = self;
+```
+
 #### What is memory management handled on iOS?
 
 iOS uses something called ARC which stands for Automatic Reference Counting. When an object is said to have a strong reference to it, ARC increase its retain count by 1. When the retain count of an object reaches 0, the object will typically be deallocated if there are no more strong references to it. Unlike garbage collection, ARC does not handle reference cycles automatically. 
