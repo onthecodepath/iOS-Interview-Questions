@@ -417,6 +417,13 @@ Great! Creating an issue will let me know what changes should be made. You can e
 
 If you open an issue, I would be happy to go ahead and add the question with the appropriate answer when I get to it!
 
+# Thank You
+
+#### Contributors
+
+- Sergtsaeb
+- onthecodePath
+
 
 
 
