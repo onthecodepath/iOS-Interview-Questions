@@ -67,6 +67,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - EKAlgorithm
     - swift-algorithm-club
 - [Contributing](https://github.com/onthecodepath/iOS-Interview-Questions#contributing)
+- [Thank You](https://github.com/onthecodepath/iOS-Interview-Questions#thank-you)
 
 # Interview Questions+Answers
 
@@ -421,8 +422,9 @@ If you open an issue, I would be happy to go ahead and add the question with the
 
 #### Contributors
 
-- Sergtsaeb
 - onthecodePath
+- Sergtsaeb
+
 
 
 
