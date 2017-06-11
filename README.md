@@ -68,7 +68,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - swift-algorithm-club
 - [Contributing](https://github.com/onthecodepath/iOS-Interview-Questions#contributing)
 
-# Interview Questions
+# Interview Questions+Answers
 
 ## Database
 
