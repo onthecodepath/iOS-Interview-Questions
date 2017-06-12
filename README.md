@@ -68,8 +68,11 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - swift-algorithm-club
 - [Contributing](https://github.com/onthecodepath/iOS-Interview-Questions#contributing)
 - [Thank You](https://github.com/onthecodepath/iOS-Interview-Questions#thank-you)
+- [Flashcards](https://quizlet.com/serg_tsogtbaatar/folders/ios-interviews/sets)
+    - The interview questions as flash card sets according to topic.
 
 # Interview Questions+Answers
+
 
 ## Database
 
@@ -129,7 +132,7 @@ A common occurence in MVC is where you have a massive-view-controller (some joke
 #### What considerations do you need when writing a UITableViewController which shows images downloaded from a remote server?
 
 - Only download the image when the cell is scrolled into view (when cellForRowAtIndexPath is called)
-- Download the image asynchrnously on a backgorund thread so as not to block the UI so the user can keep scrolling
+- Download the image asynchronously on a background thread so as not to block the UI so the user can keep scrolling
 - When the image has downloaded for a cell, check if that cell is still in the view or whether it has been re-used by another piece of data. If the cell has been re-used, then the image should be discarded. Otherwise, it should be switched back to the main thread to change the image on the cell. ([source](https://www.codementor.io/mattgoldspink/ios-interview-tips-questions-answers-objective-c-du1088nfb))
 
 #### What is a protocol? How do you define your own protocol? 
@@ -388,7 +391,7 @@ Unit/UI testing are the basic of test-driven development. This development appro
 
 viewDidLoad is only called when the view is loaded (after loadView is called). viewDidAppear, on the other hand, is called everytime the view appears on the device. 
 
-If the data is static for the most part, it can be loaded in viewDidLoad and achced. But if the data is dynamic and likely to change often, it is preferrable to use viewDidAppear. In both instances, data should be loaded asynchronously on a background thread to avoid blocking the UI.
+If the data is static for the most part, it can be loaded in viewDidLoad and cached. But if the data is dynamic and likely to change often, it is preferrable to use viewDidAppear. In both instances, data should be loaded asynchronously on a background thread to avoid blocking the UI.
 
 #### What is the difference between frame and bound of a UIView?
 
