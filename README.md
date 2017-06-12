@@ -68,6 +68,9 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - swift-algorithm-club
 - [Contributing](https://github.com/onthecodepath/iOS-Interview-Questions#contributing)
 
+-[Flashcards](https://quizlet.com/serg_tsogtbaatar/folders/ios-interviews/sets)
+    -The interview questions as flash card sets according to topic.
+
 # Interview Questions
 
 ## Database
