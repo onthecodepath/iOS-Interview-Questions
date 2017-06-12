@@ -67,11 +67,12 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
     - EKAlgorithm
     - swift-algorithm-club
 - [Contributing](https://github.com/onthecodepath/iOS-Interview-Questions#contributing)
+- [Thank You](https://github.com/onthecodepath/iOS-Interview-Questions#thank-you)
+- [Flashcards](https://quizlet.com/serg_tsogtbaatar/folders/ios-interviews/sets)
+    - The interview questions as flash card sets according to topic.
 
--[Flashcards](https://quizlet.com/serg_tsogtbaatar/folders/ios-interviews/sets)
-    -The interview questions as flash card sets according to topic.
+# Interview Questions+Answers
 
-# Interview Questions
 
 ## Database
 
@@ -419,6 +420,14 @@ Great! Creating an issue will let me know what changes should be made. You can e
 #### Requesting questions to be answered and topics
 
 If you open an issue, I would be happy to go ahead and add the question with the appropriate answer when I get to it!
+
+# Thank You
+
+#### Contributors
+
+- onthecodePath
+- Sergtsaeb
+
 
 
 
