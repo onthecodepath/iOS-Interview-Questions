@@ -71,7 +71,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [Flashcards](https://quizlet.com/serg_tsogtbaatar/folders/ios-interviews/sets)
     - The interview questions as flash card sets according to topic.
 
-# Interview Questions+Answers
+# Interview Questions&Answers
 
 
 ## Database
