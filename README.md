@@ -272,7 +272,7 @@ The syntax to define a block literal uses the caret symbol(^):
 ```
 
 ^{
-  NSLog(@"This is an example of a block"
+  NSLog(@"This is an example of a block")
 }
 
 ```
