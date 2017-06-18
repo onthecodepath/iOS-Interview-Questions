@@ -251,7 +251,7 @@ Note: In Objective-C, all objects are always allocated on the heap, or at least 
 
 #### What is synthesize in Objective-C?
 
-The method synthesize generates getter and setter methods for your property.
+*Synthesize* generates getter and setter methods for your property.
 
 #### What is dynamic in Objective-C?
 
