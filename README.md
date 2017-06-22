@@ -186,11 +186,11 @@ Cons:
 
 #### What is the difference between not-running, inactive, active, background and suspended execution states?**
 
-- *Not-running state* occurs when the app either has not be launched or was running but was terminated by the system.
-- *Inactive state* occurs where the app runs in the foreground but is currently not receiving events. (It may be executing other code though). This state is typically brief as apps transitions to other states.
-- *Active state* is where the app is running in the foreground and receiving events. This is the normal mode for foreground apps.
-- *Background state* occurs when the app is in the background and executing code. Apps typically enter this state on their way to being suspended. Apps that require extra execution time may remain in this screen longer. Apps being launched directly into the background enters this state instead of inactive state.
-- *Suspended state* is where the app is in the background but it is not executing code. Apps will remain in memory, but are removed by the system if low-memory condition occurs in order to make more space for foreground apps.
+- **Not-running state** occurs when the app either has not be launched or was running but was terminated by the system.
+- **Inactive state** occurs where the app runs in the foreground but is currently not receiving events. (It may be executing other code though). This state is typically brief as apps transitions to other states.
+- **Active state** is where the app is running in the foreground and receiving events. This is the normal mode for foreground apps.
+- **Background state** occurs when the app is in the background and executing code. Apps typically enter this state on their way to being suspended. Apps that require extra execution time may remain in this screen longer. Apps being launched directly into the background enters this state instead of inactive state.
+- **Suspended state** is where the app is in the background but it is not executing code. Apps will remain in memory, but are removed by the system if low-memory condition occurs in order to make more space for foreground apps.
 
 #### Is it faster to iterate through an NSArray or an NSSet?
 
