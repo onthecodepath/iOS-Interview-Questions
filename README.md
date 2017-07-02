@@ -295,7 +295,9 @@ Some classes of libraries and frameworks are not designed to be subclasses. For 
 
 #### What is the difference between a struct and a class?
 
-Structs are value types while classes are reference types. Classes have capabilities that structs do not:
+The main difference to note is that structs are value types (stored on stack) while classes are reference types (stored on heap). 
+
+Classes have capabilities that structs do not:
 - Inheritance enables one class to inherit the characteristics of another. ([source](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html))
 - Type casting enables you to check and interpret the type of a class instance at runtime.
 - Deinitializers enable an instance of a class to free up any resources it has assigned.
