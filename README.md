@@ -11,10 +11,10 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 ## Table of Contents
 
 - [Database](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
-    - What is NSFetchRequest?
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
     - What is a managed object context?
+    - What is NSFetchRequest?
 - [Debugging](https://github.com/onthecodepath/iOS-Interview-Questions#debugging)
     - What are some ways of debugging in iOS?
 - [Design Pattern](https://github.com/onthecodepath/iOS-Interview-Questions#design-patterns)
@@ -76,10 +76,6 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 ## Database
 
-#### What is NSFetchRequest?
-
-NSFetchRequest is the class responsible for fetching from Core Data. Fetch requests can be used to fetch a set of objects meeting a certain criteria, individual values and more. ([source](https://medium.com/ios-os-x-development/50-ios-interview-questions-and-answers-part-2-45f952230b9f))
-
 #### What is Core Data?
 
 Core Data is a framework that is used to manage the model layer objects. It has the ability to persist object graphs to a persistent store.
@@ -91,6 +87,10 @@ NSUserDefault is typically used to store small bits of data (settings, preferenc
 #### What is a managed object context?
 
 First, managed object context is an instance of NSManagedObjectContext. It is the central object in the Core Data stack. It is used to create and fetch managed objects, and to manage undo and redo operations. Although it is allowed to have multiple managed object contexts, there is typically at most one managed object to represent any given record in a persistent store.
+
+#### What is NSFetchRequest?
+
+NSFetchRequest is the class responsible for fetching from Core Data. Fetch requests can be used to fetch a set of objects meeting a certain criteria, individual values and more. ([source](https://medium.com/ios-os-x-development/50-ios-interview-questions-and-answers-part-2-45f952230b9f))
 
 ## Debugging
 
