@@ -78,7 +78,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 #### What is Core Data?
 
-Core Data is a framework that is used to manage the model layer objects. It has the ability to persist object graphs to a persistent store.
+Core Data is a framework that is used to manage model layer objects. It has the ability to persist object graphs to a persistent store. Data is organized into relational entity-attribute model.
 
 #### When would you use Core Data over NSUserDefault?
 
