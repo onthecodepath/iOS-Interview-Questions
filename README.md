@@ -139,15 +139,19 @@ A common occurence in MVC is where you have a massive-view-controller (some joke
 
 A protocol defines a list of required and optional methods for a class that adopts the protocol to implement. Any class is allowed to implement a protocol so that other classes can send message to it based on the protocol methods without knowing the type of class. An example of how a protocol is defined:
 
-```
+<details open>
+<summary>Objective-C</summary>
+    
+```objective-c
 @protocol MyCustomDataSource
 - (NSUInteger)numberOfRecords;
 - (NSDictionary *)recordAtIndex:(NSUInteger)index;
 @optional
 - (NSString *)titleForRecordAtIndex:(NSUInteger)index;
 @end
-
 ```
+</details>
+
 A common instance protocols are used is providing a DataSource for UITableView or UICollectionView ([source](https://www.codementor.io/mattgoldspink/ios-interview-tips-questions-answers-objective-c-du1088nfb))
 
 #### What is waterfall methodology and Agile methodology? What are the differences between them?
@@ -208,9 +212,14 @@ Sometimes it is necessary it capture self in a block such as when defining a cal
 
 Instead, capturing a weak reference to self is recommended in order to avoid this issue:
 
-```
+<details open>
+<summary>Objective-C</summary>
+
+```objective-c
 SomeBlock* __weak weakSelf = self;
 ```
+</details>
+
 
 #### What is memory management handled on iOS?
 
@@ -269,13 +278,15 @@ Blocks are a language-level feature of Objective (C and C++ too). They are objec
 
 The syntax to define a block literal uses the caret symbol(^):
 
-```
-
+<details open>
+<summary>Objective-C</summary>
+    
+```objective-c
 ^{
   NSLog(@"This is an example of a block")
 }
-
 ```
+</details>
 
 #### What is the difference between category and extension in Objective-C?
 
@@ -307,10 +318,14 @@ Classes have capabilities that structs do not:
 
 When referring to something as implicit or explicit, it is often referring to how an object is declared. In the two examples below:
 
-```
+<details open>
+<summary>Swift</summary>
+    
+```swift
 var name: String = "onthecodepath" // explicit
 var name = "onthecodepath" // implicit
 ```
+</details>
 
 In the first line above, the name variable is *explicitly* declared since the type of the variable follows the name of the variable. In the second line, the String type is not explicitly declared. However, Swift is able to infer that name is of a String type since the value that it is being set as is of a String type.
 
@@ -343,11 +358,33 @@ Tasks executed *serially* are executed one at a time while tasks that are execut
 
 #### Spot the bug that occurs in the code:
 
+<details open>
+<summary>Swift</summary>
+
+```swift
+class ViewController: UIViewController {
+    @IBOutlet var alert: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let frame: CGRect = CGRect(x: 100, y: 100, width: 100, height: 50)
+        self.alert = UILabel(frame: frame)
+        self.alert.text = "Please wait..."
+        self.view.addSubview(self.alert)
+    }
+    DispatchQueue.global(qos: .default).async {
+        sleep(10)
+        self.alert.text = "Waiting over"
+    }
+}
 ```
+</details>
+
+<details>
+<summary>Objective-C</summary>
+
+```objective-c
 @interface MyCustomController : UIViewController  
-
 @property (strong, nonatomic) UILabel *alert;  
-
 @end  
 
 @implementation MyCustomController  
@@ -366,20 +403,40 @@ Tasks executed *serially* are executed one at a time while tasks that are execut
   ); 
 }  
 ```
+</details>
+<br>
 
 All UI updates must be performed on the main thread. Global dispatch queues do not make any guarantees so code should be modified to run the UI update on the main thread. Here is the fix below:
 
+
+<details open>
+<summary>Swift</summary>
+
+```swift
+DispatchQueue.global(qos: .default).async {
+    sleep(10)
+    DispatchQueue.main.async {
+        self.alert.text = "Waiting over"
+    }
+}
+```
+</details>
+
+<details>
+<summary>Objective-C</summary>
+    
 ```
 dispatch_async(		
 dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
 ^{
-sleep(10);
-dispatch_async(dispatch_get_main_queue(), ^{
-self.alert.text = @"Waiting over";
-});
+    sleep(10);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.alert.text = @"Waiting over";
+    });
 }); 
 
 ```
+</details>
 
 ## Unit Testing / UI Testing
 
