@@ -196,9 +196,9 @@ Cons:
 - **Background state** occurs when the app is in the background and executing code. Apps typically enter this state on their way to being suspended. Apps that require extra execution time may remain in this screen longer. Apps being launched directly into the background enters this state instead of inactive state.
 - **Suspended state** is where the app is in the background but it is not executing code. Apps will remain in memory, but are removed by the system if low-memory condition occurs in order to make more space for foreground apps.
 
-#### Is it faster to iterate through an NSArray or an NSSet?
+#### Is it faster to search for an item in an NSArray or an NSSet?
 
-It depends. NSSet is faster to iterate through if the order of the items in the collection is not important. The reason is because NSSet uses hash values in order to find items while NSArray has to iterate through its entire contents to find a particular object. ([source - #25](https://medium.com/cocoaacademymag/25-ios-interview-questions-and-answers-for-junior-developers-19bfe6e99b0))
+It depends. NSSet is faster to lookup an item in but can hold at most one of any given object. The reason is because NSSet uses hash values in order to find items. NSArray can hold multiple copies of an object but is slower to search for an item as it has to iterate through its entire contents to find it. ([source - #25](https://medium.com/cocoaacademymag/25-ios-interview-questions-and-answers-for-junior-developers-19bfe6e99b0))
 
 #### What is KVO?
 
