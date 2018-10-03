@@ -188,7 +188,7 @@ Cons:
 - Data is not readily streamable and has to be broken up into individual objects
 - Can't use comments
 
-#### What is the difference between not-running, inactive, active, background and suspended execution states?**
+#### What is the difference between not-running, inactive, active, background and suspended execution states?
 
 - **Not-running state** occurs when the app either has not be launched or was running but was terminated by the system.
 - **Inactive state** occurs where the app runs in the foreground but is currently not receiving events. (It may be executing other code though). This state is typically brief as apps transitions to other states.
@@ -341,7 +341,7 @@ First, properties are set to *atomic* by default.
 
 *Atomic* properties are more likely to guarentee thread-safety because it will ensure that a value is fully set (by the setter method) or fully retrieved (by the getter method) when accessor methods are called simultaneously.
 
-*Non-atomic* properties, howeer are not thread-safe. While they run faster, they may cause race conditions. In the event that accessor methods are called simultaneously and a race condition occurs, a setter value would first release the old value and a getter method would retrieve nil since no value has not been set yet.
+*Non-atomic* properties, however are not thread-safe. While they run faster, they may cause race conditions. In the event that accessor methods are called simultaneously and a race condition occurs, a setter value would first release the old value and a getter method would retrieve nil since no value has not been set yet.
 
 #### What is GCD and how is it used?
 
@@ -460,7 +460,7 @@ The *frame* of a UIView is the region relative to the superview it is contained 
 
 The *reuseIdentifier* indicates that cells for a UITableView (or UICollectionView) can be reused. UITableView maintains an internal cache of UITableViewCell with the appropriate identifier and allows them to be reused when dequeueForCellWithReuseIdentifier is called. As a result, this increases performance of UITableView since a new view does not have to be created for a cell.
 
-#### What is autolayout?
+#### What is Auto Layout?
 
 Auto Layout is used to dynamically calculate the size and position of views based on constraints.
 
