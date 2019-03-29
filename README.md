@@ -10,7 +10,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 
 ## Table of Contents
 
-- [Database](https://github.com/onthecodepath/iOS-Interview-Questions#core-data)
+- [Database](https://github.com/onthecodepath/iOS-Interview-Questions#database)
     - What is Core Data?
     - When would you use Core Data over NSUserDefault?
     - What is a managed object context?
