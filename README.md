@@ -34,7 +34,7 @@ Use the Table of Contents to practice and test your knowledge. It doesn't show t
 - [Memory Management](https://github.com/onthecodepath/iOS-Interview-Questions#memory-management)
     - Why do you generally create a weak reference when using self in a block?
     - What is memory management handled on iOS?
-    - What is the difference between *weak* and *strong*?
+    - What is the difference between *weak*, *strong* and *unowned*?
     - What is a memory leak?
     - What is a retain cycle?
     - What is the difference between copy and retain?
@@ -225,12 +225,13 @@ SomeBlock* __weak weakSelf = self;
 
 iOS uses something called ARC which stands for Automatic Reference Counting. When an object is said to have a strong reference to it, ARC increase its retain count by 1. When the retain count of an object reaches 0, the object will typically be deallocated if there are no more strong references to it. Unlike garbage collection, ARC does not handle reference cycles automatically. 
 
-#### What is the difference between *weak* and *strong*?
+#### What is the difference between *weak*, *strong* and *unowned*?
 
 First, objects are *strong* by default.
 
 - *Strong* means that the reference count will be increased and the reference to it will be maintained through the life of the object. 
-- *Weak*, means that we are pointing to an object but not increasing its reference count. It’s often used when creating a parent child relationship. The parent has a strong reference to the child but the child only has a weak reference to the parent. ([source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+- *Weak*, means that we are pointing to an object but not increasing its reference count. It's always optional. It’s often used when creating a parent child relationship. The parent has a strong reference to the child but the child only has a weak reference to the parent. ([source](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a))
+- *Unowned* is the same as *Weak* in terms of reference counting but *Unowned* can be non-optional. It's useful when you are sure the object will not be accessed when it's nil (in this case it would cause an Error) because *Unowned* references don't require nil checking.
 
 Common instances of *weak* references are delegate properties and subview/controls of a view controller's main view since those views are already strongly held by the main view. ([source](http://stackoverflow.com/questions/11013587/differences-between-strong-and-weak-in-objective-c))
 
