@@ -99,6 +99,7 @@ NSFetchRequest is the class responsible for fetching from Core Data. Fetch reque
 - NSLog and print functions can be used for output into console.
 - Breakpoints can also be used together with the Debug bar and Variables view as an alternative.
 - Senior devs often use other tools such as Instruments and Crash Logs instead of the two above.
+- Resource for debugging ([source](https://developer.apple.com/documentation/xcode/debugging))
 
 ## Design Patterns
 
